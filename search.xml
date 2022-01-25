@@ -3,7 +3,7 @@
   <entry>
     <title>Knowledge-Graphs-2021</title>
     <url>/2022/01/25/Knowledge-Graphs-2021/</url>
-    <content><![CDATA[<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello World!\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content><![CDATA[<html><head></head><body></body></html>]]></content>
       <categories>
         <category>笔记</category>
         <category>论文</category>
@@ -20,7 +20,9 @@
   <entry>
     <title>Markdown 练习</title>
     <url>/2022/01/25/Markdown-%E7%BB%83%E4%B9%A0/</url>
-    <content><![CDATA[<html><head></head><body></body></html>]]></content>
+    <content><![CDATA[<html><head></head><body><p>正方形ABCD</p>
+<figure class="highlight plaintext"><figcaption><span>{cmd</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">\documentclass{standalone}</span><br><span class="line">\usepackage{tikz}</span><br><span class="line">\begin{document}</span><br><span class="line">\begin{tikzpicture}</span><br><span class="line">\draw[rounded corners] (1,3)--(2,2)--(4,5);</span><br><span class="line">\end{tikzpicture}</span><br><span class="line">\end{document}</span><br></pre></td></tr></tbody></table></figure>
+</body></html>]]></content>
       <categories>
         <category>其他</category>
       </categories>
@@ -44,7 +46,43 @@
   <entry>
     <title>Markdown</title>
     <url>/2022/01/25/Markdown/</url>
-    <content><![CDATA[<html><head></head><body></body></html>]]></content>
+    <content><![CDATA[<html><head></head><body><h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p>语法：</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line">...</span><br></pre></td></tr></tbody></table></figure>
+<p>效果：</p>
+<blockquote>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3></blockquote>
+<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><p>语法：</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 简单说一点</span><br><span class="line"><span class="bullet">2.</span> 简单说两点</span><br><span class="line"><span class="bullet">3.</span> 简单说三点</span><br><span class="line">...</span><br></pre></td></tr></tbody></table></figure>
+<p>效果：</p>
+<blockquote>
+<ol>
+<li>简单说一点</li>
+<li>简单说两点</li>
+<li>简单说三点</li>
+</ol>
+</blockquote>
+<h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p>语法：</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> 一点</span><br><span class="line"><span class="bullet">-</span> 两点</span><br><span class="line"><span class="bullet">-</span> 三点</span><br><span class="line">or</span><br><span class="line"><span class="bullet">*</span> 一点</span><br><span class="line"><span class="bullet">*</span> 两点</span><br><span class="line"><span class="bullet">*</span> 三点</span><br></pre></td></tr></tbody></table></figure>
+<p>效果：</p>
+<blockquote>
+<ul>
+<li>一点</li>
+<li>两点</li>
+<li>三点<br>or</li>
+</ul>
+<ul>
+<li>一点</li>
+<li>两点</li>
+<li>三点</li>
+</ul>
+</blockquote>
+<h1 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h1><p>语法：</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="emphasis">*斜体字*</span></span><br><span class="line"><span class="strong">**粗体字**</span></span><br><span class="line"><span class="strong">**<span class="emphasis">*粗体+斜体<span class="strong">**<span class="emphasis">*</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">~~删除线~~</span></span></span></span></span><br></pre></td></tr></tbody></table></figure>
+<p>效果：</p>
+<blockquote>
+<p><em>斜体字</em><br><strong>粗体字</strong><br><em><strong>粗体+斜体</strong></em></p>
+</blockquote>
+</body></html>]]></content>
       <categories>
         <category>笔记</category>
         <category>Markdown</category>
