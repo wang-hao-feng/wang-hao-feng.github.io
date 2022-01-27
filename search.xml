@@ -110,14 +110,175 @@ x^{\tiny 上下标混用^{并且能}}_{\tiny 不分先后_{嵌套}}</script></bl
 \cdots (一般用于没下标的)\\
 \ddots \\
 \vdots</script></blockquote>
-<h1 id="文字相关"><a href="#文字相关" class="headerlink" title="文字相关"></a>文字相关</h1><h2 id="我变色了"><a href="#我变色了" class="headerlink" title="我变色了"></a>我变色了</h2><p>语法:<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\color{颜色}{公式}</span><br></pre></td></tr></tbody></table></figure><br>效果:<br>颜色|命令|效果<br>:-:|:-:|:-:<br>黑色|\color{black}{这是黑色}|$\color{black}{这是黑色}$<br>灰色|\color{gray}{这是灰色}|$\color{gray}{这是灰色}$<br>银色|\color{silver}{这是银色}|$\color{silver}{这是银色}$<br>白色|\color{white}{这是白色}|$\color{white}{这是白色}$<br>栗色|\color{maroon}{这是栗色}|$\color{maroon}{这是栗色}$<br>红色|\color{red}{这是红色}|$\color{red}{这是红色}$<br>黄色|\color{yellow}{这是黄色}|$\color{yellow}{这是黄色}$<br>酸橙色|\color{lime}{这是酸橙色}|$\color{lime}{这是酸橙色}$<br>橄榄绿|\color{olive}{这是橄榄色}|$\color{olive}{这是橄榄绿}$<br>绿色|\color{green}{这是绿色}|$\color{green}{这是绿色}$<br>青色|\color{teal}{这是青色}|$\color{teal}{这是青色}$<br>水蓝色|\color{aqua}{这是水蓝色}|$\color{aqua}{这是水蓝色}$<br>蓝色|\color{blue}{这是蓝色}|$\color{blue}{这是蓝色}$<br>海蓝色|\color{navy}{这是海蓝色}|$\color{navy}{这是海蓝色}$<br>紫色|\color{purple}{这是紫色}|$\color{purple}{这是紫色}$<br>紫红色|\color{fuchsia}{这是紫红色}|$\color{fuchsia}{这是紫红色}$<p></p>
+<h1 id="文字相关"><a href="#文字相关" class="headerlink" title="文字相关"></a>文字相关</h1><h2 id="我变色了"><a href="#我变色了" class="headerlink" title="我变色了"></a>我变色了</h2><p>语法:<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\color{颜色}{公式}</span><br></pre></td></tr></tbody></table></figure><br>效果:<p></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">颜色</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">黑色</td>
+<td style="text-align:center">\color{black}{这是黑色}</td>
+<td style="text-align:center">$\color{black}{这是黑色}$</td>
+</tr>
+<tr>
+<td style="text-align:center">灰色</td>
+<td style="text-align:center">\color{gray}{这是灰色}</td>
+<td style="text-align:center">$\color{gray}{这是灰色}$</td>
+</tr>
+<tr>
+<td style="text-align:center">银色</td>
+<td style="text-align:center">\color{silver}{这是银色}</td>
+<td style="text-align:center">$\color{silver}{这是银色}$</td>
+</tr>
+<tr>
+<td style="text-align:center">白色</td>
+<td style="text-align:center">\color{white}{这是白色}</td>
+<td style="text-align:center">$\color{white}{这是白色}$</td>
+</tr>
+<tr>
+<td style="text-align:center">栗色</td>
+<td style="text-align:center">\color{maroon}{这是栗色}</td>
+<td style="text-align:center">$\color{maroon}{这是栗色}$</td>
+</tr>
+<tr>
+<td style="text-align:center">红色</td>
+<td style="text-align:center">\color{red}{这是红色}</td>
+<td style="text-align:center">$\color{red}{这是红色}$</td>
+</tr>
+<tr>
+<td style="text-align:center">黄色</td>
+<td style="text-align:center">\color{yellow}{这是黄色}</td>
+<td style="text-align:center">$\color{yellow}{这是黄色}$</td>
+</tr>
+<tr>
+<td style="text-align:center">酸橙色</td>
+<td style="text-align:center">\color{lime}{这是酸橙色}</td>
+<td style="text-align:center">$\color{lime}{这是酸橙色}$</td>
+</tr>
+<tr>
+<td style="text-align:center">橄榄绿</td>
+<td style="text-align:center">\color{olive}{这是橄榄色}</td>
+<td style="text-align:center">$\color{olive}{这是橄榄绿}$</td>
+</tr>
+<tr>
+<td style="text-align:center">绿色</td>
+<td style="text-align:center">\color{green}{这是绿色}</td>
+<td style="text-align:center">$\color{green}{这是绿色}$</td>
+</tr>
+<tr>
+<td style="text-align:center">青色</td>
+<td style="text-align:center">\color{teal}{这是青色}</td>
+<td style="text-align:center">$\color{teal}{这是青色}$</td>
+</tr>
+<tr>
+<td style="text-align:center">水蓝色</td>
+<td style="text-align:center">\color{aqua}{这是水蓝色}</td>
+<td style="text-align:center">$\color{aqua}{这是水蓝色}$</td>
+</tr>
+<tr>
+<td style="text-align:center">蓝色</td>
+<td style="text-align:center">\color{blue}{这是蓝色}</td>
+<td style="text-align:center">$\color{blue}{这是蓝色}$</td>
+</tr>
+<tr>
+<td style="text-align:center">海蓝色</td>
+<td style="text-align:center">\color{navy}{这是海蓝色}</td>
+<td style="text-align:center">$\color{navy}{这是海蓝色}$</td>
+</tr>
+<tr>
+<td style="text-align:center">紫色</td>
+<td style="text-align:center">\color{purple}{这是紫色}</td>
+<td style="text-align:center">$\color{purple}{这是紫色}$</td>
+</tr>
+<tr>
+<td style="text-align:center">紫红色</td>
+<td style="text-align:center">\color{fuchsia}{这是紫红色}</td>
+<td style="text-align:center">$\color{fuchsia}{这是紫红色}$</td>
+</tr>
+</tbody>
+</table>
+</div>
 <h2 id="雅蠛蝶-删除线"><a href="#雅蠛蝶-删除线" class="headerlink" title="雅蠛蝶(删除线)"></a>雅蠛蝶(删除线)</h2><p>语法:<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\cancle{主对角线} \\</span><br><span class="line">\bcancle{副对角线} \\</span><br><span class="line">\xcancle{x形} \\</span><br></pre></td></tr></tbody></table></figure><br>效果:<p></p>
 <blockquote>
 <script type="math/tex; mode=display">
 \cancel{主对角线} \\
 \bcancel{副对角线} \\
 \xcancel{x形} \\</script></blockquote>
-<h2 id="变成-的形状了"><a href="#变成-的形状了" class="headerlink" title="变成**的形状了~"></a>变成**的形状了~</h2><p>语法:<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\字体{文本}</span><br></pre></td></tr></tbody></table></figure><br>效果:<br>字体|命令|效果<br>:-:|:-:|:-:<br>罗马体|\rm{D}|$\rm{D}$<br>花体|\cal{D}|$\cal{D}$<br>意大利体|\it{D}|$\it{D}$<br>黑板粗体|\Bbb{D}|$\Bbb{D}$<br>粗体|\bf{D}|$\bf{D}$<br>数学斜体|\bm{D}|$\bm{D}$<br>等线体|\sf{D}|$\sf{D}$<br>手写体|\mathcal{D}|$\mathcal{D}$<br>打字机体|\tt{D}|$\tt{D}$<br>旧德式字体|\frak{D}|$\frak{D}$<br>黑体|\boldsymbol{D}|$\boldsymbol{D}$<p></p>
+<h2 id="变成-的形状了"><a href="#变成-的形状了" class="headerlink" title="变成**的形状了~"></a>变成**的形状了~</h2><p>语法:<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\字体{文本}</span><br></pre></td></tr></tbody></table></figure><br>效果:<p></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字体</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">罗马体</td>
+<td style="text-align:center">\rm{D}</td>
+<td style="text-align:center">$\rm{D}$</td>
+</tr>
+<tr>
+<td style="text-align:center">花体</td>
+<td style="text-align:center">\cal{D}</td>
+<td style="text-align:center">$\cal{D}$</td>
+</tr>
+<tr>
+<td style="text-align:center">意大利体</td>
+<td style="text-align:center">\it{D}</td>
+<td style="text-align:center">$\it{D}$</td>
+</tr>
+<tr>
+<td style="text-align:center">黑板粗体</td>
+<td style="text-align:center">\Bbb{D}</td>
+<td style="text-align:center">$\Bbb{D}$</td>
+</tr>
+<tr>
+<td style="text-align:center">粗体</td>
+<td style="text-align:center">\bf{D}</td>
+<td style="text-align:center">$\bf{D}$</td>
+</tr>
+<tr>
+<td style="text-align:center">数学斜体</td>
+<td style="text-align:center">\bm{D}</td>
+<td style="text-align:center">$\bm{D}$</td>
+</tr>
+<tr>
+<td style="text-align:center">等线体</td>
+<td style="text-align:center">\sf{D}</td>
+<td style="text-align:center">$\sf{D}$</td>
+</tr>
+<tr>
+<td style="text-align:center">手写体</td>
+<td style="text-align:center">\mathcal{D}</td>
+<td style="text-align:center">$\mathcal{D}$</td>
+</tr>
+<tr>
+<td style="text-align:center">打字机体</td>
+<td style="text-align:center">\tt{D}</td>
+<td style="text-align:center">$\tt{D}$</td>
+</tr>
+<tr>
+<td style="text-align:center">旧德式字体</td>
+<td style="text-align:center">\frak{D}</td>
+<td style="text-align:center">$\frak{D}$</td>
+</tr>
+<tr>
+<td style="text-align:center">黑体</td>
+<td style="text-align:center">\boldsymbol{D}</td>
+<td style="text-align:center">$\boldsymbol{D}$</td>
+</tr>
+</tbody>
+</table>
+</div>
 <h1 id="符号表"><a href="#符号表" class="headerlink" title="符号表"></a>符号表</h1><h2 id="数学模式重音符号"><a href="#数学模式重音符号" class="headerlink" title="数学模式重音符号"></a>数学模式重音符号</h2><div class="table-container">
 <table>
 <thead>
