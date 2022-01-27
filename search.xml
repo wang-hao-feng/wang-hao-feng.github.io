@@ -163,7 +163,7 @@
   <entry>
     <title>Latex</title>
     <url>/Latex%E5%85%AC%E5%BC%8F/</url>
-    <content><![CDATA[<html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>主要目的记全一点, 省得每次都需要再去找<br><span id="more"></span></p>
+    <content><![CDATA[<html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>主要目的记全一点, 省得每次都需要再去找1<br><span id="more"></span></p>
 <h1 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h1><p>语法:<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">换 \\ 行</span><br><span class="line">换 \\</span><br><span class="line">行</span><br></pre></td></tr></tbody></table></figure><br>效果:<p></p>
 <blockquote>
 <script type="math/tex; mode=display">
