@@ -108,7 +108,7 @@
 <p>效果:<br><img src="../../images/avatar.jpg" alt="图片alt标签" title="title, 可选可不选"></p>
 <h1 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h1><p>语法:</p>
 <figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">[<span class="string">超链接名</span>](<span class="link">url</span>)</span><br></pre></td></tr></tbody></table></figure>
-<p>效果:<br><a href="https://wang-hao-feng.github.io/Markdown/Markdown/#more">会再回来的</a></p>
+<p>效果:<br><a href="https://wang-hao-feng.github.io/Markdown/#more">会再回来的</a></p>
 </body></html>]]></content>
       <categories>
         <category>笔记</category>
