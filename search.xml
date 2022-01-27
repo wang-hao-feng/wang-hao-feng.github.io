@@ -33,10 +33,7 @@
     <url>/Latex%E5%85%AC%E5%BC%8F/</url>
     <content><![CDATA[<html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>主要目的记全一点, 省得每次都需要再去找<br><span id="more"></span></p>
 <h1 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h1><p>语法:<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">换 \\ 行</span><br><span class="line">换 \\</span><br><span class="line">行</span><br></pre></td></tr></tbody></table></figure><br>效果:<p></p>
-<script type="math/tex; mode=display">
-换 \\ 行
-换 \\
-行</script><h1 id="常用数学表达式"><a href="#常用数学表达式" class="headerlink" title="常用数学表达式"></a>常用数学表达式</h1><h2 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h2><p>语法:<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">x^{上标内容} \\</span><br><span class="line">x_{下标内容} \\</span><br><span class="line">x^{上下标混用^{并且能}}_{不分先后_{嵌套}}</span><br></pre></td></tr></tbody></table></figure><br>效果:<p></p>
+<script type="math/tex; mode=display">换\\行换\\行</script><h1 id="常用数学表达式"><a href="#常用数学表达式" class="headerlink" title="常用数学表达式"></a>常用数学表达式</h1><h2 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h2><p>语法:<br></p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">x^{上标内容} \\</span><br><span class="line">x_{下标内容} \\</span><br><span class="line">x^{上下标混用^{并且能}}_{不分先后_{嵌套}}</span><br></pre></td></tr></tbody></table></figure><br>效果:<p></p>
 <blockquote>
 <script type="math/tex; mode=display">
 x^{上标内容} \\
@@ -243,11 +240,6 @@ x^{\tiny 上下标混用^{并且能}}_{\tiny 不分先后_{嵌套}}</script></bl
 <td style="text-align:center">粗体</td>
 <td style="text-align:center">\bf{D}</td>
 <td style="text-align:center">$\bf{D}$</td>
-</tr>
-<tr>
-<td style="text-align:center">数学斜体</td>
-<td style="text-align:center">\bm{D}</td>
-<td style="text-align:center">$\bm{D}$</td>
 </tr>
 <tr>
 <td style="text-align:center">等线体</td>
