@@ -1,37 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Knowledge-Graphs-2021</title>
-    <url>/Knowledge-Graphs-2021/</url>
-    <content><![CDATA[<html><head></head><body></body></html>]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>论文</category>
-        <category>知识图谱</category>
-        <category>综述</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>论文</tag>
-        <tag>知识图谱</tag>
-        <tag>综述</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Latex</title>
-    <url>/Latex%E5%85%AC%E5%BC%8F/</url>
-    <content><![CDATA[<html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>主要目的记全一点，省得每次都需要再去找</p>
-<span id="more"></span></body></html>]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>Latex</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>Latex</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown</title>
     <url>/Markdown/</url>
     <content><![CDATA[<html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>主要目的记全一点, 省得每次都需要再去找</p>
@@ -132,7 +101,12 @@
 </blockquote>
 <figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">(<span class="code">```)c</span></span><br><span class="line"><span class="code">#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">int main()</span></span><br><span class="line"><span class="code">{</span></span><br><span class="line"><span class="code">    printf("Hello World!");</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    return 0;</span></span><br><span class="line"><span class="code">}</span></span><br><span class="line"><span class="code">(```</span>)</span><br></pre></td></tr></tbody></table></figure>
 <p>示例效果: </p>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Hello World!"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></body></html>]]></content>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Hello World!"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h1 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h1><p>语法:</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">[<span class="string">超链接名</span>](<span class="link">url</span>)</span><br></pre></td></tr></tbody></table></figure>
+<p>效果:<br><a href="https://wang-hao-feng.github.io/Markdown/Markdown/#more">会再回来的</a></p>
+</body></html>]]></content>
       <categories>
         <category>笔记</category>
         <category>Markdown</category>
@@ -168,6 +142,37 @@
       <tags>
         <tag>Hexo</tag>
         <tag>博客收藏</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Latex</title>
+    <url>/Latex%E5%85%AC%E5%BC%8F/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>主要目的记全一点, 省得每次都需要再去找</p>
+<span id="more"></span></body></html>]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>Latex</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>Latex</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Knowledge-Graphs-2021</title>
+    <url>/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/Knowledge-Graphs-2021/</url>
+    <content><![CDATA[<html><head></head><body></body></html>]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>论文</category>
+        <category>知识图谱</category>
+        <category>综述</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>论文</tag>
+        <tag>知识图谱</tag>
+        <tag>综述</tag>
       </tags>
   </entry>
 </search>
