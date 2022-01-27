@@ -103,6 +103,9 @@
 <p>示例效果: </p>
 <figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Hello World!"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
+<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>语法:</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">![<span class="string">图片alt标签</span>](<span class="link">图片url或路径 "title, 可选可不选"</span>)</span><br></pre></td></tr></tbody></table></figure>
+<p>效果:<br><img src="../../images/avatar.jpg" alt="图片alt标签" title="title, 可选可不选"></p>
 <h1 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h1><p>语法:</p>
 <figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">[<span class="string">超链接名</span>](<span class="link">url</span>)</span><br></pre></td></tr></tbody></table></figure>
 <p>效果:<br><a href="https://wang-hao-feng.github.io/Markdown/Markdown/#more">会再回来的</a></p>
