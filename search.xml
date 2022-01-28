@@ -1,32 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo\Hexo搭建博客</title>
-    <url>/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+    <title>Markdown</title>
+    <url>/Markdown/</url>
     <content><![CDATA[<html><head></head><body><h1 id="前言">前言</h1>
-<p>用Hexo搭建个人博客时用到的一些博客, 把网址留下<del>说不定以后会用到</del> 同时也会有自己遇到的问题, 知道咋解决了肯定会写上面 有些用到的博客可能没收录到<del>毕竟搭建完了才能写这篇, 有些已经关了</del> <span id="more"></span></p>
-<h1 id="hexo安装与配置">Hexo安装与配置</h1>
-<p><a href="https://blog.csdn.net/sinat_37781304/article/details/82729029">zjufangzh</a> 自己装的时候已经配置好了git, nodejs, ssh这些</p>
-<h1 id="用子文件夹管理博客">用子文件夹管理博客</h1>
-<p><a href="https://printempw.github.io/hexo-posts-in-subfolder/">prin</a></p>
-<h1 id="next主题安装与美化">Next主题安装与美化</h1>
-<p><a href="https://siriusq.top/Next%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96?tdsourcetag=s_pctim_aiomsg">Sirius</a> * 这里选择了不同主题后, 网页上显示的仍为原主题, 原因在于浏览器缓存了上个主题的配置, 需要使用shift + F5或ctrl + F5(win10, edge)更新缓存</p>
+<p>主要目的记全一点, 省得每次都需要再去找 <span id="more"></span></p>
+<h1 id="标题">标题</h1>
+<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line">...</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; # 一级标题 &gt; ## 二级标题 &gt; ### 三级标题<p></p>
+<h1 id="列表">列表</h1>
+<h2 id="有序列表">有序列表</h2>
+<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 简单说一点</span><br><span class="line"><span class="bullet">2.</span> 简单说两点</span><br><span class="line"><span class="bullet">3.</span> 简单说三点</span><br><span class="line">...</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; 1. 简单说一点 &gt; 2. 简单说两点 &gt; 3. 简单说三点 ## 无序列表 语法: <figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> 一点</span><br><span class="line"><span class="bullet">-</span> 两点</span><br><span class="line"><span class="bullet">-</span> 三点</span><br><span class="line">or</span><br><span class="line"><span class="bullet">*</span> 一点</span><br><span class="line"><span class="bullet">*</span> 两点</span><br><span class="line"><span class="bullet">*</span> 三点</span><br></pre></td></tr></tbody></table></figure> 效果:<p></p>
+<blockquote>
 <ul>
-<li><p>按照博客设置了背景和透明度后, tags页中文会乱码, 但是因为背景图片选的颜色太浅了, 和dark风格不匹配, 就删了背景, 没解决这个bug</p></li>
-<li><p>同样设置了点击爆炸效果后, 烟花不像原博客那么小, 懒得去找对应的文件改大小, 就一并删了这个效果</p></li>
-<li><p>Next主题的风格默认会跟随系统设置, 但我又偏爱dark风格, 想弄但还没解决, 急着搭好赶紧写笔记, 有时间了再结局吧</p></li>
+<li>一点</li>
+<li>两点</li>
+<li>三点 or</li>
+<li>一点</li>
+<li>两点</li>
+<li>三点</li>
 </ul>
-<h1 id="github-pages渲染latex">Github Pages渲染Latex</h1>
-<p><a href="https://www.zybuluo.com/anboqing/note/53250">zybuluo</a></p>
-<h1 id="hexo使用mathjax">Hexo使用Mathjax</h1>
-<p><a href="https://blog.csdn.net/littlehaes/article/details/84370393">littlehaes</a></p>
+</blockquote>
+<h1 id="字体">字体</h1>
+<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="emphasis">*斜体字*</span></span><br><span class="line"><span class="strong">**粗体字**</span></span><br><span class="line"><span class="strong">**<span class="emphasis">*粗体+斜体<span class="strong">**<span class="emphasis">*</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">~~删除线~~</span></span></span></span></span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <em>斜体字</em><br>
+&gt; <strong>粗体字</strong><br>
+&gt; <strong><em>粗体+斜体</em></strong> &gt; <del>删除线</del><p></p>
+<h1 id="引用">引用</h1>
+<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 可以多层嵌套</span></span><br><span class="line"><span class="quote">&gt; &gt; 比如这样</span></span><br></pre></td></tr></tbody></table></figure> 效果: &gt; 可以多层嵌套 &gt; &gt; 比如这样<p></p>
+<h1 id="分割线">分割线</h1>
+<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="strong">**<span class="emphasis">*</span></span></span><br><span class="line"><span class="emphasis"><span class="strong">或更多*</span>, 如</span></span><br><span class="line"><span class="strong">**</span><span class="strong">**</span></span><br></pre></td></tr></tbody></table></figure> 效果: <strong><em> 或更多</em>, 如 </strong>**<p></p>
+<h1 id="表格">表格</h1>
+<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">表头1|表头2|表头3</span><br><span class="line">---|:-:|--:</span><br><span class="line">-一个|以上|表示分割表头和内容</span><br><span class="line">文字|默认|居左</span><br><span class="line">-右边|加:|表示右对齐</span><br><span class="line">-两边|加:|表示居中</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; 表头1|表头2|表头3 &gt; ---|:-:|--: &gt; -一个|以上|表示分割表头和内容 &gt; 文字|默认|居左 &gt; -右边|加:|表示右对齐 &gt; -两边|加:|表示居中<p></p>
+<h1 id="代码">代码</h1>
+<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="code">`单行代码`</span>用&lt;`&gt;括起来, 不是单引号, 是键盘左上角~对应的那个</span><br><span class="line">(<span class="code">```)这里写语言, 也可以不写</span></span><br><span class="line"><span class="code">代码块(使用前删去```</span>两端的括号)</span><br><span class="line">(<span class="code">```)</span></span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <code>单行代码</code>用&lt;`&gt;括起来, 不是单引号, 是键盘左上角~对应的那个 &gt; <figure class="highlight plaintext"><figcaption><span>也可以不写</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">代码块(已经去掉过)</span><br></pre></td></tr></tbody></table></figure> 代码示例: <figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">(<span class="code">```)c</span></span><br><span class="line"><span class="code">#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">int main()</span></span><br><span class="line"><span class="code">{</span></span><br><span class="line"><span class="code">    printf("Hello World!");</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    return 0;</span></span><br><span class="line"><span class="code">}</span></span><br><span class="line"><span class="code">(```</span>)</span><br></pre></td></tr></tbody></table></figure> 示例效果: &gt; <figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Hello World!"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h1 id="图片">图片</h1>
+<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">![<span class="string">图片alt标签</span>](<span class="link">图片url或路径 "title, 可选可不选"</span>)</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <img src="../../images/avatar.jpg" title="title, 可选可不选" alt="图片alt标签"><p></p>
+<h1 id="超链接">超链接</h1>
+<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">[<span class="string">超链接名</span>](<span class="link">url</span>)</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <a href="https://wang-hao-feng.github.io/Markdown/#more">会再回来的</a><p></p>
+<h1 id="latex公式">Latex公式</h1>
+<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">这是$行内公式$</span><br><span class="line">$$这是行间公式$$</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; 这是<span class="math inline">\(行内公式\)</span> &gt; <span class="math display">\[这是行间公式\]</span><p></p>
 </body></html>]]></content>
       <categories>
-        <category>Hexo</category>
+        <category>笔记</category>
+        <category>Markdown</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>博客收藏</tag>
+        <tag>笔记</tag>
+        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -35,7 +54,11 @@
     <content><![CDATA[<html><head></head><body><h1 id="前言">前言</h1>
 <p>主要目的记全一点, 省得每次都需要再去找1 <span id="more"></span></p>
 <h1 id="换行">换行</h1>
-<p>语法: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">换 \\ 行</span><br><span class="line">换 \\</span><br><span class="line">行</span><br></pre></td></tr></tbody></table></figure> 效果: <span class="math display">\[换\\行换\\行\]</span><p></p>
+<p>语法: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">换 \\ 行</span><br><span class="line">换 \\</span><br><span class="line">行</span><br></pre></td></tr></tbody></table></figure> 效果: <span class="math display">\[
+换 \\ 行
+换 \\
+行
+\]</span><p></p>
 <h1 id="常用数学表达式">常用数学表达式</h1>
 <h2 id="上下标">上下标</h2>
 <p>语法: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">x^{上标内容} \\</span><br><span class="line">x_{下标内容} \\</span><br><span class="line">x^{上下标混用^{并且能}}_{不分先后_{嵌套}}</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <span class="math display">\[
@@ -1786,51 +1809,32 @@
       </tags>
   </entry>
   <entry>
-    <title>Markdown</title>
-    <url>/Markdown/</url>
+    <title>Hexo\Hexo搭建博客</title>
+    <url>/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<html><head></head><body><h1 id="前言">前言</h1>
-<p>主要目的记全一点, 省得每次都需要再去找 <span id="more"></span></p>
-<h1 id="标题">标题</h1>
-<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line">...</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; # 一级标题 &gt; ## 二级标题 &gt; ### 三级标题<p></p>
-<h1 id="列表">列表</h1>
-<h2 id="有序列表">有序列表</h2>
-<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 简单说一点</span><br><span class="line"><span class="bullet">2.</span> 简单说两点</span><br><span class="line"><span class="bullet">3.</span> 简单说三点</span><br><span class="line">...</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; 1. 简单说一点 &gt; 2. 简单说两点 &gt; 3. 简单说三点 ## 无序列表 语法: <figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> 一点</span><br><span class="line"><span class="bullet">-</span> 两点</span><br><span class="line"><span class="bullet">-</span> 三点</span><br><span class="line">or</span><br><span class="line"><span class="bullet">*</span> 一点</span><br><span class="line"><span class="bullet">*</span> 两点</span><br><span class="line"><span class="bullet">*</span> 三点</span><br></pre></td></tr></tbody></table></figure> 效果:<p></p>
-<blockquote>
+<p>用Hexo搭建个人博客时用到的一些博客, 把网址留下<del>说不定以后会用到</del> 同时也会有自己遇到的问题, 知道咋解决了肯定会写上面 有些用到的博客可能没收录到<del>毕竟搭建完了才能写这篇, 有些已经关了</del> <span id="more"></span></p>
+<h1 id="hexo安装与配置">Hexo安装与配置</h1>
+<p><a href="https://blog.csdn.net/sinat_37781304/article/details/82729029">zjufangzh</a> 自己装的时候已经配置好了git, nodejs, ssh这些</p>
+<h1 id="用子文件夹管理博客">用子文件夹管理博客</h1>
+<p><a href="https://printempw.github.io/hexo-posts-in-subfolder/">prin</a></p>
+<h1 id="next主题安装与美化">Next主题安装与美化</h1>
+<p><a href="https://siriusq.top/Next%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96?tdsourcetag=s_pctim_aiomsg">Sirius</a> * 这里选择了不同主题后, 网页上显示的仍为原主题, 原因在于浏览器缓存了上个主题的配置, 需要使用shift + F5或ctrl + F5(win10, edge)更新缓存</p>
 <ul>
-<li>一点</li>
-<li>两点</li>
-<li>三点 or</li>
-<li>一点</li>
-<li>两点</li>
-<li>三点</li>
+<li><p>按照博客设置了背景和透明度后, tags页中文会乱码, 但是因为背景图片选的颜色太浅了, 和dark风格不匹配, 就删了背景, 没解决这个bug</p></li>
+<li><p>同样设置了点击爆炸效果后, 烟花不像原博客那么小, 懒得去找对应的文件改大小, 就一并删了这个效果</p></li>
+<li><p>Next主题的风格默认会跟随系统设置, 但我又偏爱dark风格, 想弄但还没解决, 急着搭好赶紧写笔记, 有时间了再结局吧</p></li>
 </ul>
-</blockquote>
-<h1 id="字体">字体</h1>
-<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="emphasis">*斜体字*</span></span><br><span class="line"><span class="strong">**粗体字**</span></span><br><span class="line"><span class="strong">**<span class="emphasis">*粗体+斜体<span class="strong">**<span class="emphasis">*</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">~~删除线~~</span></span></span></span></span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <em>斜体字</em><br>
-&gt; <strong>粗体字</strong><br>
-&gt; <strong><em>粗体+斜体</em></strong> &gt; <del>删除线</del><p></p>
-<h1 id="引用">引用</h1>
-<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 可以多层嵌套</span></span><br><span class="line"><span class="quote">&gt; &gt; 比如这样</span></span><br></pre></td></tr></tbody></table></figure> 效果: &gt; 可以多层嵌套 &gt; &gt; 比如这样<p></p>
-<h1 id="分割线">分割线</h1>
-<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="strong">**<span class="emphasis">*</span></span></span><br><span class="line"><span class="emphasis"><span class="strong">或更多*</span>, 如</span></span><br><span class="line"><span class="strong">**</span><span class="strong">**</span></span><br></pre></td></tr></tbody></table></figure> 效果: <strong><em> 或更多</em>, 如 </strong>**<p></p>
-<h1 id="表格">表格</h1>
-<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">表头1|表头2|表头3</span><br><span class="line">---|:-:|--:</span><br><span class="line">-一个|以上|表示分割表头和内容</span><br><span class="line">文字|默认|居左</span><br><span class="line">-右边|加:|表示右对齐</span><br><span class="line">-两边|加:|表示居中</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; 表头1|表头2|表头3 &gt; ---|:-:|--: &gt; -一个|以上|表示分割表头和内容 &gt; 文字|默认|居左 &gt; -右边|加:|表示右对齐 &gt; -两边|加:|表示居中<p></p>
-<h1 id="代码">代码</h1>
-<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="code">`单行代码`</span>用&lt;`&gt;括起来, 不是单引号, 是键盘左上角~对应的那个</span><br><span class="line">(<span class="code">```)这里写语言, 也可以不写</span></span><br><span class="line"><span class="code">代码块(使用前删去```</span>两端的括号)</span><br><span class="line">(<span class="code">```)</span></span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <code>单行代码</code>用&lt;`&gt;括起来, 不是单引号, 是键盘左上角~对应的那个 &gt; <figure class="highlight plaintext"><figcaption><span>也可以不写</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">代码块(已经去掉过)</span><br></pre></td></tr></tbody></table></figure> 代码示例: <figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">(<span class="code">```)c</span></span><br><span class="line"><span class="code">#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">int main()</span></span><br><span class="line"><span class="code">{</span></span><br><span class="line"><span class="code">    printf("Hello World!");</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    return 0;</span></span><br><span class="line"><span class="code">}</span></span><br><span class="line"><span class="code">(```</span>)</span><br></pre></td></tr></tbody></table></figure> 示例效果: &gt; <figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Hello World!"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
-<h1 id="图片">图片</h1>
-<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">![<span class="string">图片alt标签</span>](<span class="link">图片url或路径 "title, 可选可不选"</span>)</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <img src="../../images/avatar.jpg" title="title, 可选可不选" alt="图片alt标签"><p></p>
-<h1 id="超链接">超链接</h1>
-<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">[<span class="string">超链接名</span>](<span class="link">url</span>)</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <a href="https://wang-hao-feng.github.io/Markdown/#more">会再回来的</a><p></p>
-<h1 id="latex公式">Latex公式</h1>
-<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">这是$行内公式$</span><br><span class="line">$$这是行间公式$$</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; 这是<span class="math inline">\(行内公式\)</span> &gt; <span class="math display">\[这是行间公式\]</span><p></p>
+<h1 id="github-pages渲染latex">Github Pages渲染Latex</h1>
+<p><a href="https://www.zybuluo.com/anboqing/note/53250">zybuluo</a></p>
+<h1 id="hexo使用mathjax">Hexo使用Mathjax</h1>
+<p><a href="https://blog.csdn.net/littlehaes/article/details/84370393">littlehaes</a></p>
 </body></html>]]></content>
       <categories>
-        <category>笔记</category>
-        <category>Markdown</category>
+        <category>Hexo</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
-        <tag>Markdown</tag>
+        <tag>Hexo</tag>
+        <tag>博客收藏</tag>
       </tags>
   </entry>
   <entry>
