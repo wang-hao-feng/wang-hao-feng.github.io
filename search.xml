@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo\Hexo搭建博客</title>
+    <url>/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="前言">前言</h1>
+<p>用Hexo搭建个人博客时用到的一些博客, 把网址留下<del>说不定以后会用到</del> 同时也会有自己遇到的问题, 知道咋解决了肯定会写上面 有些用到的博客可能没收录到<del>毕竟搭建完了才能写这篇, 有些已经关了</del> <span id="more"></span></p>
+<h1 id="hexo安装与配置">Hexo安装与配置</h1>
+<p><a href="https://blog.csdn.net/sinat_37781304/article/details/82729029">zjufangzh</a> 自己装的时候已经配置好了git, nodejs, ssh这些</p>
+<h1 id="用子文件夹管理博客">用子文件夹管理博客</h1>
+<p><a href="https://printempw.github.io/hexo-posts-in-subfolder/">prin</a></p>
+<h1 id="next主题安装与美化">Next主题安装与美化</h1>
+<p><a href="https://siriusq.top/Next%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96?tdsourcetag=s_pctim_aiomsg">Sirius</a> * 这里选择了不同主题后, 网页上显示的仍为原主题, 原因在于浏览器缓存了上个主题的配置, 需要使用shift + F5或ctrl + F5(win10, edge)更新缓存</p>
+<ul>
+<li><p>按照博客设置了背景和透明度后, tags页中文会乱码, 但是因为背景图片选的颜色太浅了, 和dark风格不匹配, 就删了背景, 没解决这个bug</p></li>
+<li><p>同样设置了点击爆炸效果后, 烟花不像原博客那么小, 懒得去找对应的文件改大小, 就一并删了这个效果</p></li>
+<li><p>Next主题的风格默认会跟随系统设置, 但我又偏爱dark风格, 想弄但还没解决, 急着搭好赶紧写笔记, 有时间了再结局吧</p></li>
+</ul>
+<h1 id="github-pages渲染latex">Github Pages渲染Latex</h1>
+<p><a href="https://www.zybuluo.com/anboqing/note/53250">zybuluo</a></p>
+<h1 id="hexo使用mathjax">Hexo使用Mathjax</h1>
+<p><a href="https://blog.csdn.net/littlehaes/article/details/84370393">littlehaes</a></p>
+</body></html>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客收藏</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Latex</title>
     <url>/Latex%E5%85%AC%E5%BC%8F/</url>
     <content><![CDATA[<html><head></head><body><h1 id="前言">前言</h1>
@@ -1758,35 +1787,6 @@ x^{\tiny 上下标混用^{并且能}}_{\tiny 不分先后_{嵌套}}
       <tags>
         <tag>笔记</tag>
         <tag>Latex</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo\Hexo搭建博客</title>
-    <url>/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<html><head></head><body><h1 id="前言">前言</h1>
-<p>用Hexo搭建个人博客时用到的一些博客, 把网址留下<del>说不定以后会用到</del> 同时也会有自己遇到的问题, 知道咋解决了肯定会写上面 有些用到的博客可能没收录到<del>毕竟搭建完了才能写这篇, 有些已经关了</del> <span id="more"></span></p>
-<h1 id="hexo安装与配置">Hexo安装与配置</h1>
-<p><a href="https://blog.csdn.net/sinat_37781304/article/details/82729029">zjufangzh</a> 自己装的时候已经配置好了git, nodejs, ssh这些</p>
-<h1 id="用子文件夹管理博客">用子文件夹管理博客</h1>
-<p><a href="https://printempw.github.io/hexo-posts-in-subfolder/">prin</a></p>
-<h1 id="next主题安装与美化">Next主题安装与美化</h1>
-<p><a href="https://siriusq.top/Next%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96?tdsourcetag=s_pctim_aiomsg">Sirius</a> * 这里选择了不同主题后, 网页上显示的仍为原主题, 原因在于浏览器缓存了上个主题的配置, 需要使用shift + F5或ctrl + F5(win10, edge)更新缓存</p>
-<ul>
-<li><p>按照博客设置了背景和透明度后, tags页中文会乱码, 但是因为背景图片选的颜色太浅了, 和dark风格不匹配, 就删了背景, 没解决这个bug</p></li>
-<li><p>同样设置了点击爆炸效果后, 烟花不像原博客那么小, 懒得去找对应的文件改大小, 就一并删了这个效果</p></li>
-<li><p>Next主题的风格默认会跟随系统设置, 但我又偏爱dark风格, 想弄但还没解决, 急着搭好赶紧写笔记, 有时间了再结局吧</p></li>
-</ul>
-<h1 id="github-pages渲染latex">Github Pages渲染Latex</h1>
-<p><a href="https://www.zybuluo.com/anboqing/note/53250">zybuluo</a></p>
-<h1 id="hexo使用mathjax">Hexo使用Mathjax</h1>
-<p><a href="https://blog.csdn.net/littlehaes/article/details/84370393">littlehaes</a></p>
-</body></html>]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>博客收藏</tag>
       </tags>
   </entry>
   <entry>
