@@ -133,6 +133,36 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo\Hexo搭建博客</title>
+    <url>/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>用Hexo搭建个人博客时用到的一些博客, 把网址留下<del>说不定以后会用到</del><br>同时也会有自己遇到的问题, 知道咋解决了肯定会写上面<br>有些用到的博客可能没收录到<del>毕竟搭建完了才能写这篇, 有些已经关了</del></p>
+<span id="more"></span>
+
+<h1 id="Hexo安装与配置"><a href="#Hexo安装与配置" class="headerlink" title="Hexo安装与配置"></a>Hexo安装与配置</h1><p><a href="https://blog.csdn.net/sinat_37781304/article/details/82729029">zjufangzh</a><br>自己装的时候已经配置好了git, nodejs, ssh这些</p>
+<h1 id="用子文件夹管理博客"><a href="#用子文件夹管理博客" class="headerlink" title="用子文件夹管理博客"></a>用子文件夹管理博客</h1><p><a href="https://printempw.github.io/hexo-posts-in-subfolder/">prin</a></p>
+<h1 id="Next主题安装与美化"><a href="#Next主题安装与美化" class="headerlink" title="Next主题安装与美化"></a>Next主题安装与美化</h1><p><a href="https://siriusq.top/Next%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96?tdsourcetag=s_pctim_aiomsg">Sirius</a></p>
+<ul>
+<li><p>这里选择了不同主题后, 网页上显示的仍为原主题, 原因在于浏览器缓存了上个主题的配置, 需要使用shift + F5或ctrl + F5(win10, edge)更新缓存</p>
+</li>
+<li><p>按照博客设置了背景和透明度后, tags页中文会乱码, 但是因为背景图片选的颜色太浅了, 和dark风格不匹配, 就删了背景, 没解决这个bug</p>
+</li>
+<li><p>同样设置了点击爆炸效果后, 烟花不像原博客那么小, 懒得去找对应的文件改大小, 就一并删了这个效果</p>
+</li>
+<li><p>Next主题的风格默认会跟随系统设置, 但我又偏爱dark风格, 想弄但还没解决, 急着搭好赶紧写笔记, 有时间了再结局吧</p>
+</li>
+</ul>
+<h1 id="Github-Pages渲染Latex"><a href="#Github-Pages渲染Latex" class="headerlink" title="Github Pages渲染Latex"></a>Github Pages渲染Latex</h1><p><a href="https://www.zybuluo.com/anboqing/note/53250">zybuluo</a></p>
+<h1 id="Hexo使用Mathjax"><a href="#Hexo使用Mathjax" class="headerlink" title="Hexo使用Mathjax"></a>Hexo使用Mathjax</h1><p><a href="https://blog.csdn.net/littlehaes/article/details/84370393">littlehaes</a></p>
+</body></html>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客收藏</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Latex</title>
     <url>/Latex%E5%85%AC%E5%BC%8F/</url>
     <content><![CDATA[<html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>主要目的记全一点, 省得每次都需要再去找1</p>
@@ -148,7 +178,7 @@
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">x^{上标内容} \\</span><br><span class="line">x_{下标内容} \\</span><br><span class="line">x^{上下标混用^{并且能}}_{不分先后_{嵌套}}</span><br></pre></td></tr></tbody></table></figure>
 <p>效果:</p>
 <blockquote>
-<p>$$<br>x^{上标内容} \<br>x_{下标内容} \<br>x^{\tiny 上下标混用^{并且能}}<em>{\tiny 不分先后</em>{嵌套}}<br>$$</p>
+<p>$$<br>x^{上标内容} \\<br>x_{下标内容} \\<br>x^{\tiny 上下标混用^{并且能}}_{\tiny 不分先后_{嵌套}}<br>$$</p>
 </blockquote>
 <h2 id="分数"><a href="#分数" class="headerlink" title="分数"></a>分数</h2><p>语法:</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\frac{这是分子\frac{而且还}{可以嵌套}}{这是分母}</span><br></pre></td></tr></tbody></table></figure>
@@ -1862,36 +1892,6 @@
       <tags>
         <tag>笔记</tag>
         <tag>Latex</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo\Hexo搭建博客</title>
-    <url>/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>用Hexo搭建个人博客时用到的一些博客, 把网址留下<del>说不定以后会用到</del><br>同时也会有自己遇到的问题, 知道咋解决了肯定会写上面<br>有些用到的博客可能没收录到<del>毕竟搭建完了才能写这篇, 有些已经关了</del></p>
-<span id="more"></span>
-
-<h1 id="Hexo安装与配置"><a href="#Hexo安装与配置" class="headerlink" title="Hexo安装与配置"></a>Hexo安装与配置</h1><p><a href="https://blog.csdn.net/sinat_37781304/article/details/82729029">zjufangzh</a><br>自己装的时候已经配置好了git, nodejs, ssh这些</p>
-<h1 id="用子文件夹管理博客"><a href="#用子文件夹管理博客" class="headerlink" title="用子文件夹管理博客"></a>用子文件夹管理博客</h1><p><a href="https://printempw.github.io/hexo-posts-in-subfolder/">prin</a></p>
-<h1 id="Next主题安装与美化"><a href="#Next主题安装与美化" class="headerlink" title="Next主题安装与美化"></a>Next主题安装与美化</h1><p><a href="https://siriusq.top/Next%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96?tdsourcetag=s_pctim_aiomsg">Sirius</a></p>
-<ul>
-<li><p>这里选择了不同主题后, 网页上显示的仍为原主题, 原因在于浏览器缓存了上个主题的配置, 需要使用shift + F5或ctrl + F5(win10, edge)更新缓存</p>
-</li>
-<li><p>按照博客设置了背景和透明度后, tags页中文会乱码, 但是因为背景图片选的颜色太浅了, 和dark风格不匹配, 就删了背景, 没解决这个bug</p>
-</li>
-<li><p>同样设置了点击爆炸效果后, 烟花不像原博客那么小, 懒得去找对应的文件改大小, 就一并删了这个效果</p>
-</li>
-<li><p>Next主题的风格默认会跟随系统设置, 但我又偏爱dark风格, 想弄但还没解决, 急着搭好赶紧写笔记, 有时间了再结局吧</p>
-</li>
-</ul>
-<h1 id="Github-Pages渲染Latex"><a href="#Github-Pages渲染Latex" class="headerlink" title="Github Pages渲染Latex"></a>Github Pages渲染Latex</h1><p><a href="https://www.zybuluo.com/anboqing/note/53250">zybuluo</a></p>
-<h1 id="Hexo使用Mathjax"><a href="#Hexo使用Mathjax" class="headerlink" title="Hexo使用Mathjax"></a>Hexo使用Mathjax</h1><p><a href="https://blog.csdn.net/littlehaes/article/details/84370393">littlehaes</a></p>
-</body></html>]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>博客收藏</tag>
       </tags>
   </entry>
   <entry>
