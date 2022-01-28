@@ -4,13 +4,18 @@
     <title>Hexo\Hexo搭建博客</title>
     <url>/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<html><head></head><body><h1 id="前言">前言</h1>
-<p>用Hexo搭建个人博客时用到的一些博客, 把网址留下<del>说不定以后会用到</del> 同时也会有自己遇到的问题, 知道咋解决了肯定会写上面 有些用到的博客可能没收录到<del>毕竟搭建完了才能写这篇, 有些已经关了</del> <span id="more"></span></p>
+<p>用Hexo搭建个人博客时用到的一些博客, 把网址留下<del>说不定以后会用到</del><br>
+同时也会有自己遇到的问题, 知道咋解决了肯定会写上面<br>
+有些用到的博客可能没收录到<del>毕竟搭建完了才能写这篇, 有些已经关了</del><br>
+<span id="more"></span></p>
 <h1 id="hexo安装与配置">Hexo安装与配置</h1>
-<p><a href="https://blog.csdn.net/sinat_37781304/article/details/82729029">zjufangzh</a> 自己装的时候已经配置好了git, nodejs, ssh这些</p>
+<p><a href="https://blog.csdn.net/sinat_37781304/article/details/82729029">zjufangzh</a><br>
+自己装的时候已经配置好了git, nodejs, ssh这些</p>
 <h1 id="用子文件夹管理博客">用子文件夹管理博客</h1>
 <p><a href="https://printempw.github.io/hexo-posts-in-subfolder/">prin</a></p>
 <h1 id="next主题安装与美化">Next主题安装与美化</h1>
-<p><a href="https://siriusq.top/Next%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96?tdsourcetag=s_pctim_aiomsg">Sirius</a> * 这里选择了不同主题后, 网页上显示的仍为原主题, 原因在于浏览器缓存了上个主题的配置, 需要使用shift + F5或ctrl + F5(win10, edge)更新缓存</p>
+<p><a href="https://siriusq.top/Next%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96?tdsourcetag=s_pctim_aiomsg">Sirius</a><br>
+* 这里选择了不同主题后, 网页上显示的仍为原主题, 原因在于浏览器缓存了上个主题的配置, 需要使用shift + F5或ctrl + F5(win10, edge)更新缓存</p>
 <ul>
 <li><p>按照博客设置了背景和透明度后, tags页中文会乱码, 但是因为背景图片选的颜色太浅了, 和dark风格不匹配, 就删了背景, 没解决这个bug</p></li>
 <li><p>同样设置了点击爆炸效果后, 烟花不像原博客那么小, 懒得去找对应的文件改大小, 就一并删了这个效果</p></li>
@@ -33,37 +38,56 @@
     <title>Latex</title>
     <url>/Latex%E5%85%AC%E5%BC%8F/</url>
     <content><![CDATA[<html><head></head><body><h1 id="前言">前言</h1>
-<p>主要目的记全一点, 省得每次都需要再去找1 <span id="more"></span></p>
+<p>主要目的记全一点, 省得每次都需要再去找1<br>
+<span id="more"></span></p>
 <h1 id="换行">换行</h1>
-<p>语法: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">换 \\ 行</span><br><span class="line">换 \\</span><br><span class="line">行</span><br></pre></td></tr></tbody></table></figure> 效果: <span class="math display">\[
+<p>语法:<br>
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">换 \\ 行</span><br><span class="line">换 \\</span><br><span class="line">行</span><br></pre></td></tr></tbody></table></figure><br>
+效果:<br>
+<span class="math display">\[
 换 \newline 行
 换 \newline
 行
 \]</span><p></p>
 <h1 id="常用数学表达式">常用数学表达式</h1>
 <h2 id="上下标">上下标</h2>
-<p>语法: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">x^{上标内容} \\</span><br><span class="line">x_{下标内容} \\</span><br><span class="line">x^{上下标混用^{并且能}}_{不分先后_{嵌套}}</span><br></pre></td></tr></tbody></table></figure> 效果: <span class="math display">\[
+<p>语法:<br>
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">x^{上标内容} \\</span><br><span class="line">x_{下标内容} \\</span><br><span class="line">x^{上下标混用^{并且能}}_{不分先后_{嵌套}}</span><br></pre></td></tr></tbody></table></figure><br>
+效果:<br>
+<span class="math display">\[
 x^{上标内容} \\
 x_{下标内容} \\
 x^{\tiny 上下标混用^{并且能}}_{\tiny 不分先后_{嵌套}}
 \]</span><p></p>
 <h2 id="分数">分数</h2>
-<p>语法: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\frac{这是分子\frac{而且还}{可以嵌套}}{这是分母}</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <span class="math display">\[
+<p>语法:<br>
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\frac{这是分子\frac{而且还}{可以嵌套}}{这是分母}</span><br></pre></td></tr></tbody></table></figure><br>
+效果:<br>
+&gt; <span class="math display">\[
 &gt; \frac{这是分子\frac{而且还}{可以嵌套}}{这是分母}
 &gt; \]</span><p></p>
 <h2 id="根式">根式</h2>
-<p>语法: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\sqrt[表示几次根,可以省略]{表达式}</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <span class="math display">\[
+<p>语法:<br>
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\sqrt[表示几次根,可以省略]{表达式}</span><br></pre></td></tr></tbody></table></figure><br>
+效果:<br>
+&gt; <span class="math display">\[
 &gt; \sqrt[表示几次根,可以省略]{表达式}
 &gt; \]</span><p></p>
 <h2 id="箭头">箭头</h2>
-<p>语法: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\vec{向量} \\</span><br><span class="line">\overleftarrow{脑kó上左箭头} \\</span><br><span class="line">\overrightarrow{脑kó上右箭头} \\</span><br><span class="line">\overleftrightarrow{脑kó上双向箭头}</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <span class="math display">\[
+<p>语法:<br>
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\vec{向量} \\</span><br><span class="line">\overleftarrow{脑kó上左箭头} \\</span><br><span class="line">\overrightarrow{脑kó上右箭头} \\</span><br><span class="line">\overleftrightarrow{脑kó上双向箭头}</span><br></pre></td></tr></tbody></table></figure><br>
+效果:<br>
+&gt; <span class="math display">\[
 &gt; \vec{向量} \\
 &gt; \overleftarrow{脑kó上左箭头} \\
 &gt; \overrightarrow{脑kó上右箭头} \\
 &gt; \overleftrightarrow{脑kó上双向箭头}
 &gt; \]</span><p></p>
 <h2 id="矩阵">矩阵</h2>
-<p>语法: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\begin{matrix}</span><br><span class="line">我 &amp; 是 \\</span><br><span class="line">矩 &amp; 阵 \\</span><br><span class="line">\end{matrix} \\</span><br><span class="line"></span><br><span class="line">\begin{pmatrix}</span><br><span class="line">圆 &amp; 括号 \\</span><br><span class="line">\end{pmatrix} \\</span><br><span class="line"></span><br><span class="line">\begin{bmatrix}</span><br><span class="line">方 &amp; 括号 \\</span><br><span class="line">\end{bmatrix} \\</span><br><span class="line"></span><br><span class="line">\begin{Bmatrix}</span><br><span class="line">花 &amp; 括号 \\</span><br><span class="line">\end{Bmatrix} \\</span><br><span class="line"></span><br><span class="line">\begin{vmatrix}</span><br><span class="line">单 &amp; 竖线 \\</span><br><span class="line">\end{vmatrix} \\</span><br><span class="line"></span><br><span class="line">\begin{Vmatrix}</span><br><span class="line">双 &amp; 竖线 \\</span><br><span class="line">\end{Vmatrix}</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <span class="math display">\[
+<p>语法:<br>
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\begin{matrix}</span><br><span class="line">我 &amp; 是 \\</span><br><span class="line">矩 &amp; 阵 \\</span><br><span class="line">\end{matrix} \\</span><br><span class="line"></span><br><span class="line">\begin{pmatrix}</span><br><span class="line">圆 &amp; 括号 \\</span><br><span class="line">\end{pmatrix} \\</span><br><span class="line"></span><br><span class="line">\begin{bmatrix}</span><br><span class="line">方 &amp; 括号 \\</span><br><span class="line">\end{bmatrix} \\</span><br><span class="line"></span><br><span class="line">\begin{Bmatrix}</span><br><span class="line">花 &amp; 括号 \\</span><br><span class="line">\end{Bmatrix} \\</span><br><span class="line"></span><br><span class="line">\begin{vmatrix}</span><br><span class="line">单 &amp; 竖线 \\</span><br><span class="line">\end{vmatrix} \\</span><br><span class="line"></span><br><span class="line">\begin{Vmatrix}</span><br><span class="line">双 &amp; 竖线 \\</span><br><span class="line">\end{Vmatrix}</span><br></pre></td></tr></tbody></table></figure><br>
+效果:<br>
+&gt; <span class="math display">\[
 &gt; \begin{matrix}
 &gt; 我 &amp; 是 \\
 &gt; 矩 &amp; 阵 \\
@@ -85,11 +109,17 @@ x^{\tiny 上下标混用^{并且能}}_{\tiny 不分先后_{嵌套}}
 &gt; \end{Vmatrix}
 &gt; \]</span><p></p>
 <h2 id="n范数">n范数</h2>
-<p>语法: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\parallel 用下标 \parallel_{表示n范数}</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <span class="math display">\[
+<p>语法:<br>
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\parallel 用下标 \parallel_{表示n范数}</span><br></pre></td></tr></tbody></table></figure><br>
+效果:<br>
+&gt; <span class="math display">\[
 &gt; \parallel 用下标 \parallel_{表示n范数}
 &gt; \]</span><p></p>
 <h2 id="分支公式">分支公式</h2>
-<p>语法: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">等号左边 = \begin{cases}</span><br><span class="line">第一支 &amp;第一支取值范围 \\</span><br><span class="line">第二支 &amp;第二支的取值范围 \\</span><br><span class="line">\cdots \\</span><br><span class="line">第n支 &amp;第n支的取值范围</span><br><span class="line">\end{cases}</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <span class="math display">\[
+<p>语法:<br>
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">等号左边 = \begin{cases}</span><br><span class="line">第一支 &amp;第一支取值范围 \\</span><br><span class="line">第二支 &amp;第二支的取值范围 \\</span><br><span class="line">\cdots \\</span><br><span class="line">第n支 &amp;第n支的取值范围</span><br><span class="line">\end{cases}</span><br></pre></td></tr></tbody></table></figure><br>
+效果:<br>
+&gt; <span class="math display">\[
 &gt; 等号左边 = \begin{cases}
 &gt; 第一支 &amp;第一支取值范围 \\
 &gt; 第二支 &amp;第二支的取值范围 \\
@@ -98,7 +128,10 @@ x^{\tiny 上下标混用^{并且能}}_{\tiny 不分先后_{嵌套}}
 &gt; \end{cases}
 &gt; \]</span><p></p>
 <h1 id="空格">空格</h1>
-<p>语法: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">紧\!贴 \\</span><br><span class="line">小\,空格 \\</span><br><span class="line">1/3\ 空格 \\</span><br><span class="line">中等\:空格 \\</span><br><span class="line">一个\quad空格 \\</span><br><span class="line">两个\qquad空格 \\</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <span class="math display">\[
+<p>语法:<br>
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">紧\!贴 \\</span><br><span class="line">小\,空格 \\</span><br><span class="line">1/3\ 空格 \\</span><br><span class="line">中等\:空格 \\</span><br><span class="line">一个\quad空格 \\</span><br><span class="line">两个\qquad空格 \\</span><br></pre></td></tr></tbody></table></figure><br>
+效果:<br>
+&gt; <span class="math display">\[
 &gt; 紧\!贴 \\
 &gt; 小\,空格 \\
 &gt; 1/3\ 空格 \\
@@ -107,7 +140,10 @@ x^{\tiny 上下标混用^{并且能}}_{\tiny 不分先后_{嵌套}}
 &gt; 两个\qquad空格 \\
 &gt; \]</span><p></p>
 <h1 id="省略号">省略号</h1>
-<p><del>要不省略了吧</del> </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\dots (一般用于有下标的)\\</span><br><span class="line">\cdots (一般用于没下标的)\\</span><br><span class="line">\ddots \\</span><br><span class="line">\vdots </span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <span class="math display">\[
+<p><del>要不省略了吧</del><br>
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\dots (一般用于有下标的)\\</span><br><span class="line">\cdots (一般用于没下标的)\\</span><br><span class="line">\ddots \\</span><br><span class="line">\vdots </span><br></pre></td></tr></tbody></table></figure><br>
+效果:<br>
+&gt; <span class="math display">\[
 &gt; \dots (一般用于有下标的)\\
 &gt; \cdots (一般用于没下标的)\\
 &gt; \ddots \\
@@ -115,7 +151,9 @@ x^{\tiny 上下标混用^{并且能}}_{\tiny 不分先后_{嵌套}}
 &gt; \]</span><p></p>
 <h1 id="文字相关">文字相关</h1>
 <h2 id="我变色了">我变色了</h2>
-<p>语法: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\color{颜色}{公式}</span><br></pre></td></tr></tbody></table></figure> 效果:<p></p>
+<p>语法:<br>
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\color{颜色}{公式}</span><br></pre></td></tr></tbody></table></figure><br>
+效果:<p></p>
 <table>
 <thead>
 <tr class="header">
@@ -208,13 +246,18 @@ x^{\tiny 上下标混用^{并且能}}_{\tiny 不分先后_{嵌套}}
 </tbody>
 </table>
 <h2 id="雅蠛蝶删除线">雅蠛蝶(删除线)</h2>
-<p>语法: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\cancle{主对角线} \\</span><br><span class="line">\bcancle{副对角线} \\</span><br><span class="line">\xcancle{x形} \\</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <span class="math display">\[
+<p>语法:<br>
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\cancle{主对角线} \\</span><br><span class="line">\bcancle{副对角线} \\</span><br><span class="line">\xcancle{x形} \\</span><br></pre></td></tr></tbody></table></figure><br>
+效果:<br>
+&gt; <span class="math display">\[
 &gt; \cancel{主对角线} \\
 &gt; \bcancel{副对角线} \\
 &gt; \xcancel{x形} \\
 &gt; \]</span><p></p>
 <h2 id="变成的形状了">变成**的形状了~</h2>
-<p>语法: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\字体{文本}</span><br></pre></td></tr></tbody></table></figure> 效果:<p></p>
+<p>语法:<br>
+</p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\字体{文本}</span><br></pre></td></tr></tbody></table></figure><br>
+效果:<p></p>
 <table>
 <thead>
 <tr class="header">
@@ -1793,40 +1836,95 @@ x^{\tiny 上下标混用^{并且能}}_{\tiny 不分先后_{嵌套}}
     <title>Markdown</title>
     <url>/Markdown/</url>
     <content><![CDATA[<html><head></head><body><h1 id="前言">前言</h1>
-<p>主要目的记全一点, 省得每次都需要再去找 <span id="more"></span></p>
+<p>主要目的记全一点, 省得每次都需要再去找<br>
+<span id="more"></span></p>
 <h1 id="标题">标题</h1>
-<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line">...</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; # 一级标题 &gt; ## 二级标题 &gt; ### 三级标题<p></p>
+<p>语法:<br>
+</p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line">...</span><br></pre></td></tr></tbody></table></figure><br>
+效果:<br>
+&gt; # 一级标题<br>
+&gt; ## 二级标题<br>
+&gt; ### 三级标题<p></p>
 <h1 id="列表">列表</h1>
 <h2 id="有序列表">有序列表</h2>
-<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 简单说一点</span><br><span class="line"><span class="bullet">2.</span> 简单说两点</span><br><span class="line"><span class="bullet">3.</span> 简单说三点</span><br><span class="line">...</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; 1. 简单说一点 &gt; 2. 简单说两点 &gt; 3. 简单说三点 ## 无序列表 语法: <figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> 一点</span><br><span class="line"><span class="bullet">-</span> 两点</span><br><span class="line"><span class="bullet">-</span> 三点</span><br><span class="line">or</span><br><span class="line"><span class="bullet">*</span> 一点</span><br><span class="line"><span class="bullet">*</span> 两点</span><br><span class="line"><span class="bullet">*</span> 三点</span><br></pre></td></tr></tbody></table></figure> 效果:<p></p>
+<p>语法:<br>
+</p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 简单说一点</span><br><span class="line"><span class="bullet">2.</span> 简单说两点</span><br><span class="line"><span class="bullet">3.</span> 简单说三点</span><br><span class="line">...</span><br></pre></td></tr></tbody></table></figure><br>
+效果:<br>
+&gt; 1. 简单说一点<br>
+&gt; 2. 简单说两点<br>
+&gt; 3. 简单说三点<br>
+## 无序列表<br>
+语法:<br>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> 一点</span><br><span class="line"><span class="bullet">-</span> 两点</span><br><span class="line"><span class="bullet">-</span> 三点</span><br><span class="line">or</span><br><span class="line"><span class="bullet">*</span> 一点</span><br><span class="line"><span class="bullet">*</span> 两点</span><br><span class="line"><span class="bullet">*</span> 三点</span><br></pre></td></tr></tbody></table></figure><br>
+效果:<p></p>
 <blockquote>
 <ul>
 <li>一点</li>
 <li>两点</li>
-<li>三点 or</li>
+<li>三点<br>
+or</li>
 <li>一点</li>
 <li>两点</li>
 <li>三点</li>
 </ul>
 </blockquote>
 <h1 id="字体">字体</h1>
-<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="emphasis">*斜体字*</span></span><br><span class="line"><span class="strong">**粗体字**</span></span><br><span class="line"><span class="strong">**<span class="emphasis">*粗体+斜体<span class="strong">**<span class="emphasis">*</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">~~删除线~~</span></span></span></span></span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <em>斜体字</em><br>
+<p>语法:<br>
+</p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="emphasis">*斜体字*</span></span><br><span class="line"><span class="strong">**粗体字**</span></span><br><span class="line"><span class="strong">**<span class="emphasis">*粗体+斜体<span class="strong">**<span class="emphasis">*</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">~~删除线~~</span></span></span></span></span><br></pre></td></tr></tbody></table></figure><br>
+效果:<br>
+&gt; <em>斜体字</em><br>
 &gt; <strong>粗体字</strong><br>
-&gt; <strong><em>粗体+斜体</em></strong> &gt; <del>删除线</del><p></p>
+&gt; <strong><em>粗体+斜体</em></strong><br>
+&gt; <del>删除线</del><p></p>
 <h1 id="引用">引用</h1>
-<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 可以多层嵌套</span></span><br><span class="line"><span class="quote">&gt; &gt; 比如这样</span></span><br></pre></td></tr></tbody></table></figure> 效果: &gt; 可以多层嵌套 &gt; &gt; 比如这样<p></p>
+<p>语法:<br>
+</p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 可以多层嵌套</span></span><br><span class="line"><span class="quote">&gt; &gt; 比如这样</span></span><br></pre></td></tr></tbody></table></figure><br>
+效果:<br>
+&gt; 可以多层嵌套<br>
+&gt; &gt; 比如这样<p></p>
 <h1 id="分割线">分割线</h1>
-<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="strong">**<span class="emphasis">*</span></span></span><br><span class="line"><span class="emphasis"><span class="strong">或更多*</span>, 如</span></span><br><span class="line"><span class="strong">**</span><span class="strong">**</span></span><br></pre></td></tr></tbody></table></figure> 效果: <strong><em> 或更多</em>, 如 </strong>**<p></p>
+<p>语法:<br>
+</p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="strong">**<span class="emphasis">*</span></span></span><br><span class="line"><span class="emphasis"><span class="strong">或更多*</span>, 如</span></span><br><span class="line"><span class="strong">**</span><span class="strong">**</span></span><br></pre></td></tr></tbody></table></figure><br>
+效果:<br>
+<strong><em><br>
+或更多</em>, 如<br>
+</strong>**<p></p>
 <h1 id="表格">表格</h1>
-<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">表头1|表头2|表头3</span><br><span class="line">---|:-:|--:</span><br><span class="line">-一个|以上|表示分割表头和内容</span><br><span class="line">文字|默认|居左</span><br><span class="line">-右边|加:|表示右对齐</span><br><span class="line">-两边|加:|表示居中</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; 表头1|表头2|表头3 &gt; ---|:-:|--: &gt; -一个|以上|表示分割表头和内容 &gt; 文字|默认|居左 &gt; -右边|加:|表示右对齐 &gt; -两边|加:|表示居中<p></p>
+<p>语法:<br>
+</p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">表头1|表头2|表头3</span><br><span class="line">---|:-:|--:</span><br><span class="line">-一个|以上|表示分割表头和内容</span><br><span class="line">文字|默认|居左</span><br><span class="line">-右边|加:|表示右对齐</span><br><span class="line">-两边|加:|表示居中</span><br></pre></td></tr></tbody></table></figure><br>
+效果:<br>
+&gt; 表头1|表头2|表头3<br>
+&gt; ---|:-:|--:<br>
+&gt; -一个|以上|表示分割表头和内容<br>
+&gt; 文字|默认|居左<br>
+&gt; -右边|加:|表示右对齐<br>
+&gt; -两边|加:|表示居中<p></p>
 <h1 id="代码">代码</h1>
-<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="code">`单行代码`</span>用&lt;`&gt;括起来, 不是单引号, 是键盘左上角~对应的那个</span><br><span class="line">(<span class="code">```)这里写语言, 也可以不写</span></span><br><span class="line"><span class="code">代码块(使用前删去```</span>两端的括号)</span><br><span class="line">(<span class="code">```)</span></span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <code>单行代码</code>用&lt;`&gt;括起来, 不是单引号, 是键盘左上角~对应的那个 &gt; <figure class="highlight plaintext"><figcaption><span>也可以不写</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">代码块(已经去掉过)</span><br></pre></td></tr></tbody></table></figure> 代码示例: <figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">(<span class="code">```)c</span></span><br><span class="line"><span class="code">#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">int main()</span></span><br><span class="line"><span class="code">{</span></span><br><span class="line"><span class="code">    printf("Hello World!");</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    return 0;</span></span><br><span class="line"><span class="code">}</span></span><br><span class="line"><span class="code">(```</span>)</span><br></pre></td></tr></tbody></table></figure> 示例效果: &gt; <figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Hello World!"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>语法:<br>
+</p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="code">`单行代码`</span>用&lt;`&gt;括起来, 不是单引号, 是键盘左上角~对应的那个</span><br><span class="line">(<span class="code">```)这里写语言, 也可以不写</span></span><br><span class="line"><span class="code">代码块(使用前删去```</span>两端的括号)</span><br><span class="line">(<span class="code">```)</span></span><br></pre></td></tr></tbody></table></figure><br>
+效果:<br>
+&gt; <code>单行代码</code>用&lt;`&gt;括起来, 不是单引号, 是键盘左上角~对应的那个<br>
+&gt; <figure class="highlight plaintext"><figcaption><span>也可以不写</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">代码块(已经去掉过)</span><br></pre></td></tr></tbody></table></figure><br>
+代码示例:<br>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">(<span class="code">```)c</span></span><br><span class="line"><span class="code">#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">int main()</span></span><br><span class="line"><span class="code">{</span></span><br><span class="line"><span class="code">    printf("Hello World!");</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    return 0;</span></span><br><span class="line"><span class="code">}</span></span><br><span class="line"><span class="code">(```</span>)</span><br></pre></td></tr></tbody></table></figure><br>
+示例效果:<br>
+&gt; <figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Hello World!"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
 <h1 id="图片">图片</h1>
-<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">![<span class="string">图片alt标签</span>](<span class="link">图片url或路径 "title, 可选可不选"</span>)</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <img src="../../images/avatar.jpg" title="title, 可选可不选" alt="图片alt标签"><p></p>
+<p>语法:<br>
+</p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">![<span class="string">图片alt标签</span>](<span class="link">图片url或路径 "title, 可选可不选"</span>)</span><br></pre></td></tr></tbody></table></figure><br>
+效果:<br>
+&gt; <img src="../../images/avatar.jpg" title="title, 可选可不选" alt="图片alt标签"><p></p>
 <h1 id="超链接">超链接</h1>
-<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">[<span class="string">超链接名</span>](<span class="link">url</span>)</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <a href="https://wang-hao-feng.github.io/Markdown/#more">会再回来的</a><p></p>
+<p>语法:<br>
+</p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">[<span class="string">超链接名</span>](<span class="link">url</span>)</span><br></pre></td></tr></tbody></table></figure><br>
+效果:<br>
+&gt; <a href="https://wang-hao-feng.github.io/Markdown/#more">会再回来的</a><p></p>
 <h1 id="latex公式">Latex公式</h1>
-<p>语法: </p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">这是$行内公式$</span><br><span class="line">$$这是行间公式$$</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; 这是<span class="math inline">\(行内公式\)</span> &gt; <span class="math display">\[这是行间公式\]</span><p></p>
+<p>语法:<br>
+</p><figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">这是$行内公式$</span><br><span class="line">$$这是行间公式$$</span><br></pre></td></tr></tbody></table></figure><br>
+效果:<br>
+&gt; 这是<span class="math inline">\(行内公式\)</span><br>
+&gt; <span class="math display">\[这是行间公式\]</span><p></p>
 </body></html>]]></content>
       <categories>
         <category>笔记</category>
