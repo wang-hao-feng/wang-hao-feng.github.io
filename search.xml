@@ -43,9 +43,9 @@
 <h1 id="常用数学表达式">常用数学表达式</h1>
 <h2 id="上下标">上下标</h2>
 <p>语法: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">x^{上标内容} \\</span><br><span class="line">x_{下标内容} \\</span><br><span class="line">x^{上下标混用^{并且能}}_{不分先后_{嵌套}}</span><br></pre></td></tr></tbody></table></figure> 效果: <span class="math display">\[
-x\^{上标内容} \\\\
-x\_{下标内容} \\\\
-x\^{\tiny 上下标混用\^{并且能}}\_{\tiny 不分先后\_{嵌套}}
+x^{上标内容} \\
+x_{下标内容} \\
+x^{\tiny 上下标混用^{并且能}}_{\tiny 不分先后_{嵌套}}
 \]</span><p></p>
 <h2 id="分数">分数</h2>
 <p>语法: </p><figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\frac{这是分子\frac{而且还}{可以嵌套}}{这是分母}</span><br></pre></td></tr></tbody></table></figure> 效果: &gt; <span class="math display">\[
