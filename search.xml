@@ -31,6 +31,138 @@
       </tags>
   </entry>
   <entry>
+    <title>Markdown</title>
+    <url>/Markdown/</url>
+    <content><![CDATA[<html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>主要目的记全一点, 省得每次都需要再去找</p>
+<span id="more"></span>
+
+<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p>语法: </p>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line">...</span><br></pre></td></tr></tbody></table></figure>
+<p>效果: </p>
+<blockquote>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3></blockquote>
+<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><p>语法: </p>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 简单说一点</span><br><span class="line"><span class="bullet">2.</span> 简单说两点</span><br><span class="line"><span class="bullet">3.</span> 简单说三点</span><br><span class="line">...</span><br></pre></td></tr></tbody></table></figure>
+<p>效果: </p>
+<blockquote>
+<ol>
+<li>简单说一点</li>
+<li>简单说两点</li>
+<li>简单说三点</li>
+</ol>
+</blockquote>
+<h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p>语法: </p>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> 一点</span><br><span class="line"><span class="bullet">-</span> 两点</span><br><span class="line"><span class="bullet">-</span> 三点</span><br><span class="line">or</span><br><span class="line"><span class="bullet">*</span> 一点</span><br><span class="line"><span class="bullet">*</span> 两点</span><br><span class="line"><span class="bullet">*</span> 三点</span><br></pre></td></tr></tbody></table></figure>
+<p>效果: </p>
+<blockquote>
+<ul>
+<li>一点</li>
+<li>两点</li>
+<li>三点<br>or</li>
+</ul>
+<ul>
+<li>一点</li>
+<li>两点</li>
+<li>三点</li>
+</ul>
+</blockquote>
+<h1 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h1><p>语法: </p>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="emphasis">*斜体字*</span></span><br><span class="line"><span class="strong">**粗体字**</span></span><br><span class="line"><span class="strong">**<span class="emphasis">*粗体+斜体<span class="strong">**<span class="emphasis">*</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">~~删除线~~</span></span></span></span></span><br></pre></td></tr></tbody></table></figure>
+<p>效果: </p>
+<blockquote>
+<p><em>斜体字</em><br><strong>粗体字</strong><br><em><strong>粗体+斜体</strong></em><br><del>删除线</del></p>
+</blockquote>
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p>语法: </p>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 可以多层嵌套</span></span><br><span class="line"><span class="quote">&gt; &gt; 比如这样</span></span><br></pre></td></tr></tbody></table></figure>
+<p>效果: </p>
+<blockquote>
+<p>可以多层嵌套</p>
+<blockquote>
+<p>比如这样</p>
+</blockquote>
+</blockquote>
+<h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><p>语法: </p>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="strong">**<span class="emphasis">*</span></span></span><br><span class="line"><span class="emphasis"><span class="strong">或更多*</span>, 如</span></span><br><span class="line"><span class="strong">**</span><span class="strong">**</span></span><br></pre></td></tr></tbody></table></figure>
+<p>效果: </p>
+<hr>
+<p>或更多*, 如</p>
+<hr>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p>语法: </p>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">表头1|表头2|表头3</span><br><span class="line">---|:-:|--:</span><br><span class="line">-一个|以上|表示分割表头和内容</span><br><span class="line">文字|默认|居左</span><br><span class="line">-右边|加:|表示右对齐</span><br><span class="line">-两边|加:|表示居中</span><br></pre></td></tr></tbody></table></figure>
+<p>效果: </p>
+<blockquote>
+<table>
+<thead>
+<tr>
+<th>表头1</th>
+<th align="center">表头2</th>
+<th align="right">表头3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-一个</td>
+<td align="center">以上</td>
+<td align="right">表示分割表头和内容</td>
+</tr>
+<tr>
+<td>文字</td>
+<td align="center">默认</td>
+<td align="right">居左</td>
+</tr>
+<tr>
+<td>-右边</td>
+<td align="center">加:</td>
+<td align="right">表示右对齐</td>
+</tr>
+<tr>
+<td>-两边</td>
+<td align="center">加:</td>
+<td align="right">表示居中</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>语法: </p>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="code">`单行代码`</span>用&lt;`&gt;括起来, 不是单引号, 是键盘左上角~对应的那个</span><br><span class="line">(<span class="code">```)这里写语言, 也可以不写</span></span><br><span class="line"><span class="code">代码块(使用前删去```</span>两端的括号)</span><br><span class="line">(<span class="code">```)</span></span><br></pre></td></tr></tbody></table></figure>
+<p>效果: </p>
+<blockquote>
+<p><code>单行代码</code>用&lt;`&gt;括起来, 不是单引号, 是键盘左上角~对应的那个</p>
+<figure class="highlight plaintext"><figcaption><span>也可以不写</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">代码块(已经去掉过)</span><br></pre></td></tr></tbody></table></figure>
+<p>代码示例: </p>
+</blockquote>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">(<span class="code">```)c</span></span><br><span class="line"><span class="code">#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">int main()</span></span><br><span class="line"><span class="code">{</span></span><br><span class="line"><span class="code">    printf("Hello World!");</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    return 0;</span></span><br><span class="line"><span class="code">}</span></span><br><span class="line"><span class="code">(```</span>)</span><br></pre></td></tr></tbody></table></figure>
+<p>示例效果: </p>
+<blockquote>
+<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Hello World!"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</blockquote>
+<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>语法:</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">![<span class="string">图片alt标签</span>](<span class="link">图片url或路径 "title, 可选可不选"</span>)</span><br></pre></td></tr></tbody></table></figure>
+<p>效果:</p>
+<blockquote>
+<p><img src="../../images/avatar.jpg" alt="图片alt标签" title="title, 可选可不选"></p>
+</blockquote>
+<h1 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h1><p>语法:</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">[<span class="string">超链接名</span>](<span class="link">url</span>)</span><br></pre></td></tr></tbody></table></figure>
+<p>效果:</p>
+<blockquote>
+<p><a href="https://wang-hao-feng.github.io/Markdown/#more">会再回来的</a></p>
+</blockquote>
+<h1 id="Latex公式"><a href="#Latex公式" class="headerlink" title="Latex公式"></a>Latex公式</h1><p>语法:</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">这是$行内公式$</span><br><span class="line">$$这是行间公式$$</span><br></pre></td></tr></tbody></table></figure>
+<p>效果:</p>
+<blockquote>
+<p>这是$行内公式$<br>$$这是行间公式$$</p>
+</blockquote>
+</body></html>]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>Markdown</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Latex</title>
     <url>/Latex%E5%85%AC%E5%BC%8F/</url>
     <content><![CDATA[<html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>主要目的记全一点, 省得每次都需要再去找1</p>
@@ -40,7 +172,7 @@
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">换 \\ 行</span><br><span class="line">换 \\</span><br><span class="line">行</span><br></pre></td></tr></tbody></table></figure>
 <p>效果:</p>
 <blockquote>
-<p>$$<br>换 \ 行<br>换 \<br>行<br>$$</p>
+<p>$$<br>换 \\ 行<br>换 \\<br>行<br>$$</p>
 </blockquote>
 <h1 id="常用数学表达式"><a href="#常用数学表达式" class="headerlink" title="常用数学表达式"></a>常用数学表达式</h1><h2 id="上下标"><a href="#上下标" class="headerlink" title="上下标"></a>上下标</h2><p>语法:</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">x^{上标内容} \\</span><br><span class="line">x_{下标内容} \\</span><br><span class="line">x^{上下标混用^{并且能}}_{不分先后_{嵌套}}</span><br></pre></td></tr></tbody></table></figure>
@@ -1760,138 +1892,6 @@
       <tags>
         <tag>笔记</tag>
         <tag>Latex</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Markdown</title>
-    <url>/Markdown/</url>
-    <content><![CDATA[<html><head></head><body><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>主要目的记全一点, 省得每次都需要再去找</p>
-<span id="more"></span>
-
-<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p>语法: </p>
-<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line">...</span><br></pre></td></tr></tbody></table></figure>
-<p>效果: </p>
-<blockquote>
-<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3></blockquote>
-<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><p>语法: </p>
-<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 简单说一点</span><br><span class="line"><span class="bullet">2.</span> 简单说两点</span><br><span class="line"><span class="bullet">3.</span> 简单说三点</span><br><span class="line">...</span><br></pre></td></tr></tbody></table></figure>
-<p>效果: </p>
-<blockquote>
-<ol>
-<li>简单说一点</li>
-<li>简单说两点</li>
-<li>简单说三点</li>
-</ol>
-</blockquote>
-<h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p>语法: </p>
-<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> 一点</span><br><span class="line"><span class="bullet">-</span> 两点</span><br><span class="line"><span class="bullet">-</span> 三点</span><br><span class="line">or</span><br><span class="line"><span class="bullet">*</span> 一点</span><br><span class="line"><span class="bullet">*</span> 两点</span><br><span class="line"><span class="bullet">*</span> 三点</span><br></pre></td></tr></tbody></table></figure>
-<p>效果: </p>
-<blockquote>
-<ul>
-<li>一点</li>
-<li>两点</li>
-<li>三点<br>or</li>
-</ul>
-<ul>
-<li>一点</li>
-<li>两点</li>
-<li>三点</li>
-</ul>
-</blockquote>
-<h1 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h1><p>语法: </p>
-<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="emphasis">*斜体字*</span></span><br><span class="line"><span class="strong">**粗体字**</span></span><br><span class="line"><span class="strong">**<span class="emphasis">*粗体+斜体<span class="strong">**<span class="emphasis">*</span></span></span></span></span><br><span class="line"><span class="emphasis"><span class="strong"><span class="emphasis"><span class="strong">~~删除线~~</span></span></span></span></span><br></pre></td></tr></tbody></table></figure>
-<p>效果: </p>
-<blockquote>
-<p><em>斜体字</em><br><strong>粗体字</strong><br><em><strong>粗体+斜体</strong></em><br><del>删除线</del></p>
-</blockquote>
-<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p>语法: </p>
-<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 可以多层嵌套</span></span><br><span class="line"><span class="quote">&gt; &gt; 比如这样</span></span><br></pre></td></tr></tbody></table></figure>
-<p>效果: </p>
-<blockquote>
-<p>可以多层嵌套</p>
-<blockquote>
-<p>比如这样</p>
-</blockquote>
-</blockquote>
-<h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><p>语法: </p>
-<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="strong">**<span class="emphasis">*</span></span></span><br><span class="line"><span class="emphasis"><span class="strong">或更多*</span>, 如</span></span><br><span class="line"><span class="strong">**</span><span class="strong">**</span></span><br></pre></td></tr></tbody></table></figure>
-<p>效果: </p>
-<hr>
-<p>或更多*, 如</p>
-<hr>
-<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p>语法: </p>
-<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">表头1|表头2|表头3</span><br><span class="line">---|:-:|--:</span><br><span class="line">-一个|以上|表示分割表头和内容</span><br><span class="line">文字|默认|居左</span><br><span class="line">-右边|加:|表示右对齐</span><br><span class="line">-两边|加:|表示居中</span><br></pre></td></tr></tbody></table></figure>
-<p>效果: </p>
-<blockquote>
-<table>
-<thead>
-<tr>
-<th>表头1</th>
-<th align="center">表头2</th>
-<th align="right">表头3</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-一个</td>
-<td align="center">以上</td>
-<td align="right">表示分割表头和内容</td>
-</tr>
-<tr>
-<td>文字</td>
-<td align="center">默认</td>
-<td align="right">居左</td>
-</tr>
-<tr>
-<td>-右边</td>
-<td align="center">加:</td>
-<td align="right">表示右对齐</td>
-</tr>
-<tr>
-<td>-两边</td>
-<td align="center">加:</td>
-<td align="right">表示居中</td>
-</tr>
-</tbody></table>
-</blockquote>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>语法: </p>
-<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line"><span class="code">`单行代码`</span>用&lt;`&gt;括起来, 不是单引号, 是键盘左上角~对应的那个</span><br><span class="line">(<span class="code">```)这里写语言, 也可以不写</span></span><br><span class="line"><span class="code">代码块(使用前删去```</span>两端的括号)</span><br><span class="line">(<span class="code">```)</span></span><br></pre></td></tr></tbody></table></figure>
-<p>效果: </p>
-<blockquote>
-<p><code>单行代码</code>用&lt;`&gt;括起来, 不是单引号, 是键盘左上角~对应的那个</p>
-<figure class="highlight plaintext"><figcaption><span>也可以不写</span></figcaption><table><tbody><tr><td class="code"><pre><span class="line">代码块(已经去掉过)</span><br></pre></td></tr></tbody></table></figure>
-<p>代码示例: </p>
-</blockquote>
-<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">(<span class="code">```)c</span></span><br><span class="line"><span class="code">#include &lt;stdio.h&gt;</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">int main()</span></span><br><span class="line"><span class="code">{</span></span><br><span class="line"><span class="code">    printf("Hello World!");</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">    return 0;</span></span><br><span class="line"><span class="code">}</span></span><br><span class="line"><span class="code">(```</span>)</span><br></pre></td></tr></tbody></table></figure>
-<p>示例效果: </p>
-<blockquote>
-<figure class="highlight c"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Hello World!"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-</blockquote>
-<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p>语法:</p>
-<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">![<span class="string">图片alt标签</span>](<span class="link">图片url或路径 "title, 可选可不选"</span>)</span><br></pre></td></tr></tbody></table></figure>
-<p>效果:</p>
-<blockquote>
-<p><img src="../../images/avatar.jpg" alt="图片alt标签" title="title, 可选可不选"></p>
-</blockquote>
-<h1 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h1><p>语法:</p>
-<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">[<span class="string">超链接名</span>](<span class="link">url</span>)</span><br></pre></td></tr></tbody></table></figure>
-<p>效果:</p>
-<blockquote>
-<p><a href="https://wang-hao-feng.github.io/Markdown/#more">会再回来的</a></p>
-</blockquote>
-<h1 id="Latex公式"><a href="#Latex公式" class="headerlink" title="Latex公式"></a>Latex公式</h1><p>语法:</p>
-<figure class="highlight markdown"><table><tbody><tr><td class="code"><pre><span class="line">这是$行内公式$</span><br><span class="line">$$这是行间公式$$</span><br></pre></td></tr></tbody></table></figure>
-<p>效果:</p>
-<blockquote>
-<p>这是$行内公式$<br>$$这是行间公式$$</p>
-</blockquote>
-</body></html>]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>Markdown</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
