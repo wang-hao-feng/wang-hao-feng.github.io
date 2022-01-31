@@ -68,90 +68,6 @@ next/_config.yml中改为:</li>
       </tags>
   </entry>
   <entry>
-    <title>Knowledge-Graphs-2021</title>
-    <url>/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/Knowledge-Graphs-2021/</url>
-    <content><![CDATA[<html><head></head><body><p><a href="https://arxiv.org/pdf/2003.02320v2.pdf">原文地址</a></p>
-<span id="more"></span>
-<h1 id="introduce"><a class="markdownIt-Anchor" href="#introduce"></a> Introduce</h1>
-<ul>
-<li>在涉及到从大规模多数据源中整合、管理、提取信息的应用场景中，使用图模型抽象知识相对于使用诸如关系模型或NoSQL方案的优点
-<ol>
-<li>图为各种领域提供了简单直观的抽象，例如：图的边(edges)——在社交数据中表示固有实体之间的关系；在生物领域可以表示生物相互关系；在文献中可以表示引用或者共同作者等</li>
-<li>维护者可以推迟schema(各领域知识所需要满足的基本结构)的定义；相较于关系模型中可能的方式，能允许数据以及其规模以更灵活的方式发展，对于捕捉不完整数据更是如此</li>
-<li>专门的图模型不仅支持标准关系操作，还支持递归查询任意距离的实体之间关系的操作</li>
-<li>可以利用诸如本体论(ontologies)或规则等标准知识表现形式定义和推导术语。这些术语用于标记和描述节点</li>
-<li>图分析的可扩展框架可用于计算诸如中心、聚类、总结等任务，以便于深入了解图所描述的领域</li>
-<li>多种表示法允许机器学习技术直接用于图上</li>
-</ol>
-</li>
-<li>知识图谱的定义：
-<ul>
-<li>旨在积累传达真实世界知识的数据图，图上的节点表示感兴趣的实体，而边表示实体之间的关系</li>
-<li>知识一般源于外界积累或内部演绎归纳</li>
-<li>知识可以是简单陈述(北京是首都)或量化陈述(首都是城市)。简单陈述可以由边表示；量化陈述需要更具表现力的结构，如ontologies本体论或规则。之后可以使用演绎模型发掘更进一步的知识(北京是城市)。额外的知识也可以使用归纳模型得出。</li>
-</ul>
-</li>
-<li>知识图谱的组成：
-<ul>
-<li>由多种来源组成，因此在结构和粒度上可能高度多样化</li>
-<li>schema、标识和上下文在解决多样化上起到举足轻重的作用。schema定义了知识图谱的高级结构；标识描述了节点与真实世界的对应关系；上下文定义了知识成立所需的特殊环境。</li>
-</ul>
-</li>
-</ul>
-<h1 id="data-graphs"><a class="markdownIt-Anchor" href="#data-graphs"></a> Data Graphs</h1>
-<h2 id="models"><a class="markdownIt-Anchor" href="#models"></a> Models</h2>
-<h2 id="querying"><a class="markdownIt-Anchor" href="#querying"></a> Querying</h2>
-<h1 id="schema-identity-context"><a class="markdownIt-Anchor" href="#schema-identity-context"></a> Schema, Identity, Context</h1>
-<h2 id="schema"><a class="markdownIt-Anchor" href="#schema"></a> Schema</h2>
-<h2 id="identity"><a class="markdownIt-Anchor" href="#identity"></a> Identity</h2>
-<h2 id="context"><a class="markdownIt-Anchor" href="#context"></a> Context</h2>
-<h1 id="deductive-knowledge"><a class="markdownIt-Anchor" href="#deductive-knowledge"></a> Deductive Knowledge</h1>
-<h2 id="ontologines"><a class="markdownIt-Anchor" href="#ontologines"></a> Ontologines</h2>
-<h2 id="semantics-and-entailment"><a class="markdownIt-Anchor" href="#semantics-and-entailment"></a> Semantics and Entailment</h2>
-<h2 id="reasoning"><a class="markdownIt-Anchor" href="#reasoning"></a> Reasoning</h2>
-<h1 id="inductive-knowledge"><a class="markdownIt-Anchor" href="#inductive-knowledge"></a> Inductive Knowledge</h1>
-<h2 id="graph-analytics"><a class="markdownIt-Anchor" href="#graph-analytics"></a> Graph Analytics</h2>
-<h2 id="knowledge-graph-embeddings"><a class="markdownIt-Anchor" href="#knowledge-graph-embeddings"></a> Knowledge Graph Embeddings</h2>
-<h2 id="graph-neural-networks"><a class="markdownIt-Anchor" href="#graph-neural-networks"></a> Graph Neural Networks</h2>
-<h2 id="symbolic-learning"><a class="markdownIt-Anchor" href="#symbolic-learning"></a> Symbolic Learning</h2>
-<h1 id="creation-and-enrichment"><a class="markdownIt-Anchor" href="#creation-and-enrichment"></a> Creation and Enrichment</h1>
-<h2 id="human-collaboration"><a class="markdownIt-Anchor" href="#human-collaboration"></a> Human Collaboration</h2>
-<h2 id="text-sources"><a class="markdownIt-Anchor" href="#text-sources"></a> Text Sources</h2>
-<h2 id="markup-sources"><a class="markdownIt-Anchor" href="#markup-sources"></a> Markup Sources</h2>
-<h2 id="structured-sources"><a class="markdownIt-Anchor" href="#structured-sources"></a> Structured Sources</h2>
-<h2 id="schemaontology-creation"><a class="markdownIt-Anchor" href="#schemaontology-creation"></a> Schema/Ontology Creation</h2>
-<h1 id="quality-assessment"><a class="markdownIt-Anchor" href="#quality-assessment"></a> Quality Assessment</h1>
-<h2 id="coverage"><a class="markdownIt-Anchor" href="#coverage"></a> Coverage</h2>
-<h2 id="coherency"><a class="markdownIt-Anchor" href="#coherency"></a> Coherency</h2>
-<h2 id="succinctness"><a class="markdownIt-Anchor" href="#succinctness"></a> Succinctness</h2>
-<h2 id="other-quality-dimensions"><a class="markdownIt-Anchor" href="#other-quality-dimensions"></a> Other Quality Dimensions</h2>
-<h1 id="refinement"><a class="markdownIt-Anchor" href="#refinement"></a> Refinement</h1>
-<h2 id="completion"><a class="markdownIt-Anchor" href="#completion"></a> Completion</h2>
-<h2 id="correction"><a class="markdownIt-Anchor" href="#correction"></a> Correction</h2>
-<h2 id="other-refinement-tasks"><a class="markdownIt-Anchor" href="#other-refinement-tasks"></a> Other refinement tasks</h2>
-<h1 id="publication"><a class="markdownIt-Anchor" href="#publication"></a> Publication</h1>
-<h2 id="best-practices"><a class="markdownIt-Anchor" href="#best-practices"></a> Best Practices</h2>
-<h2 id="access-protocols"><a class="markdownIt-Anchor" href="#access-protocols"></a> Access Protocols</h2>
-<h2 id="usage-control"><a class="markdownIt-Anchor" href="#usage-control"></a> Usage Control</h2>
-<h1 id="knowledge-graphs-in-practice"><a class="markdownIt-Anchor" href="#knowledge-graphs-in-practice"></a> Knowledge Graphs in Practice</h1>
-<h2 id="openknowledge-graphs"><a class="markdownIt-Anchor" href="#openknowledge-graphs"></a> OpenKnowledge Graphs</h2>
-<h2 id="enterprise-knowledge-graphs"><a class="markdownIt-Anchor" href="#enterprise-knowledge-graphs"></a> Enterprise Knowledge Graphs</h2>
-<h1 id="summary-and-conclusion"><a class="markdownIt-Anchor" href="#summary-and-conclusion"></a> Summary and Conclusion</h1>
-</body></html>]]></content>
-      <categories>
-        <category>笔记</category>
-        <category>论文</category>
-        <category>知识图谱</category>
-        <category>综述</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>论文</tag>
-        <tag>知识图谱</tag>
-        <tag>综述</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Latex</title>
     <url>/Latex%E5%85%AC%E5%BC%8F/</url>
     <content><![CDATA[<html><head></head><body><h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
@@ -2218,6 +2134,90 @@ or</li>
       <tags>
         <tag>笔记</tag>
         <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Knowledge-Graphs-2021</title>
+    <url>/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/Knowledge-Graphs-2021/</url>
+    <content><![CDATA[<html><head></head><body><p><a href="https://arxiv.org/pdf/2003.02320v2.pdf">原文地址</a></p>
+<span id="more"></span>
+<h1 id="introduce"><a class="markdownIt-Anchor" href="#introduce"></a> Introduce</h1>
+<ul>
+<li>在涉及到从大规模多数据源中整合、管理、提取信息的应用场景中，使用图模型抽象知识相对于使用诸如关系模型或NoSQL方案的优点
+<ol>
+<li>图为各种领域提供了简单直观的抽象，例如：图的边(edges)——在社交数据中表示固有实体之间的关系；在生物领域可以表示生物相互关系；在文献中可以表示引用或者共同作者等</li>
+<li>维护者可以推迟schema(各领域知识所需要满足的基本结构)的定义；相较于关系模型中可能的方式，能允许数据以及其规模以更灵活的方式发展，对于捕捉不完整数据更是如此</li>
+<li>专门的图模型不仅支持标准关系操作，还支持递归查询任意距离的实体之间关系的操作</li>
+<li>可以利用诸如本体论(ontologies)或规则等标准知识表现形式定义和推导术语。这些术语用于标记和描述节点</li>
+<li>图分析的可扩展框架可用于计算诸如中心、聚类、总结等任务，以便于深入了解图所描述的领域</li>
+<li>多种表示法允许机器学习技术直接用于图上</li>
+</ol>
+</li>
+<li>知识图谱的定义：
+<ul>
+<li>旨在积累传达真实世界知识的数据图，图上的节点表示感兴趣的实体，而边表示实体之间的关系</li>
+<li>知识一般源于外界积累或内部演绎归纳</li>
+<li>知识可以是简单陈述(北京是首都)或量化陈述(首都是城市)。简单陈述可以由边表示；量化陈述需要更具表现力的结构，如ontologies本体论或规则。之后可以使用演绎模型发掘更进一步的知识(北京是城市)。额外的知识也可以使用归纳模型得出。</li>
+</ul>
+</li>
+<li>知识图谱的组成：
+<ul>
+<li>由多种来源组成，因此在结构和粒度上可能高度多样化</li>
+<li>schema、标识和上下文在解决多样化上起到举足轻重的作用。schema定义了知识图谱的高级结构；标识描述了节点与真实世界的对应关系；上下文定义了知识成立所需的特殊环境。</li>
+</ul>
+</li>
+</ul>
+<h1 id="data-graphs"><a class="markdownIt-Anchor" href="#data-graphs"></a> Data Graphs</h1>
+<h2 id="models"><a class="markdownIt-Anchor" href="#models"></a> Models</h2>
+<h2 id="querying"><a class="markdownIt-Anchor" href="#querying"></a> Querying</h2>
+<h1 id="schema-identity-context"><a class="markdownIt-Anchor" href="#schema-identity-context"></a> Schema, Identity, Context</h1>
+<h2 id="schema"><a class="markdownIt-Anchor" href="#schema"></a> Schema</h2>
+<h2 id="identity"><a class="markdownIt-Anchor" href="#identity"></a> Identity</h2>
+<h2 id="context"><a class="markdownIt-Anchor" href="#context"></a> Context</h2>
+<h1 id="deductive-knowledge"><a class="markdownIt-Anchor" href="#deductive-knowledge"></a> Deductive Knowledge</h1>
+<h2 id="ontologines"><a class="markdownIt-Anchor" href="#ontologines"></a> Ontologines</h2>
+<h2 id="semantics-and-entailment"><a class="markdownIt-Anchor" href="#semantics-and-entailment"></a> Semantics and Entailment</h2>
+<h2 id="reasoning"><a class="markdownIt-Anchor" href="#reasoning"></a> Reasoning</h2>
+<h1 id="inductive-knowledge"><a class="markdownIt-Anchor" href="#inductive-knowledge"></a> Inductive Knowledge</h1>
+<h2 id="graph-analytics"><a class="markdownIt-Anchor" href="#graph-analytics"></a> Graph Analytics</h2>
+<h2 id="knowledge-graph-embeddings"><a class="markdownIt-Anchor" href="#knowledge-graph-embeddings"></a> Knowledge Graph Embeddings</h2>
+<h2 id="graph-neural-networks"><a class="markdownIt-Anchor" href="#graph-neural-networks"></a> Graph Neural Networks</h2>
+<h2 id="symbolic-learning"><a class="markdownIt-Anchor" href="#symbolic-learning"></a> Symbolic Learning</h2>
+<h1 id="creation-and-enrichment"><a class="markdownIt-Anchor" href="#creation-and-enrichment"></a> Creation and Enrichment</h1>
+<h2 id="human-collaboration"><a class="markdownIt-Anchor" href="#human-collaboration"></a> Human Collaboration</h2>
+<h2 id="text-sources"><a class="markdownIt-Anchor" href="#text-sources"></a> Text Sources</h2>
+<h2 id="markup-sources"><a class="markdownIt-Anchor" href="#markup-sources"></a> Markup Sources</h2>
+<h2 id="structured-sources"><a class="markdownIt-Anchor" href="#structured-sources"></a> Structured Sources</h2>
+<h2 id="schemaontology-creation"><a class="markdownIt-Anchor" href="#schemaontology-creation"></a> Schema/Ontology Creation</h2>
+<h1 id="quality-assessment"><a class="markdownIt-Anchor" href="#quality-assessment"></a> Quality Assessment</h1>
+<h2 id="coverage"><a class="markdownIt-Anchor" href="#coverage"></a> Coverage</h2>
+<h2 id="coherency"><a class="markdownIt-Anchor" href="#coherency"></a> Coherency</h2>
+<h2 id="succinctness"><a class="markdownIt-Anchor" href="#succinctness"></a> Succinctness</h2>
+<h2 id="other-quality-dimensions"><a class="markdownIt-Anchor" href="#other-quality-dimensions"></a> Other Quality Dimensions</h2>
+<h1 id="refinement"><a class="markdownIt-Anchor" href="#refinement"></a> Refinement</h1>
+<h2 id="completion"><a class="markdownIt-Anchor" href="#completion"></a> Completion</h2>
+<h2 id="correction"><a class="markdownIt-Anchor" href="#correction"></a> Correction</h2>
+<h2 id="other-refinement-tasks"><a class="markdownIt-Anchor" href="#other-refinement-tasks"></a> Other refinement tasks</h2>
+<h1 id="publication"><a class="markdownIt-Anchor" href="#publication"></a> Publication</h1>
+<h2 id="best-practices"><a class="markdownIt-Anchor" href="#best-practices"></a> Best Practices</h2>
+<h2 id="access-protocols"><a class="markdownIt-Anchor" href="#access-protocols"></a> Access Protocols</h2>
+<h2 id="usage-control"><a class="markdownIt-Anchor" href="#usage-control"></a> Usage Control</h2>
+<h1 id="knowledge-graphs-in-practice"><a class="markdownIt-Anchor" href="#knowledge-graphs-in-practice"></a> Knowledge Graphs in Practice</h1>
+<h2 id="openknowledge-graphs"><a class="markdownIt-Anchor" href="#openknowledge-graphs"></a> OpenKnowledge Graphs</h2>
+<h2 id="enterprise-knowledge-graphs"><a class="markdownIt-Anchor" href="#enterprise-knowledge-graphs"></a> Enterprise Knowledge Graphs</h2>
+<h1 id="summary-and-conclusion"><a class="markdownIt-Anchor" href="#summary-and-conclusion"></a> Summary and Conclusion</h1>
+</body></html>]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>论文</category>
+        <category>知识图谱</category>
+        <category>综述</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>论文</tag>
+        <tag>知识图谱</tag>
+        <tag>综述</tag>
       </tags>
   </entry>
 </search>
