@@ -2192,8 +2192,31 @@ or</li>
 <h1 id="data-graphs"><a class="markdownIt-Anchor" href="#data-graphs"></a> Data Graphs</h1>
 <p>任何知识图谱的基础——用图模型抽象数据</p>
 <h2 id="models"><a class="markdownIt-Anchor" href="#models"></a> Models</h2>
-<h3 id="directed-edge-labelled-graphs有向边标记图"><a class="markdownIt-Anchor" href="#directed-edge-labelled-graphs有向边标记图"></a> Directed edge-labelled graphs(有向边标记图)</h3>
-<p>点用于表示实体，边用于表示存在关系，如<code>[实体1]--(关系)-&gt;[实体2]</code></p>
+<h3 id="directed-edge-labelled-graphs有向边标记图-delg"><a class="markdownIt-Anchor" href="#directed-edge-labelled-graphs有向边标记图-delg"></a> Directed edge-labelled graphs(有向边标记图 DelG)</h3>
+<p>点用于表示实体，边用于表示存在关系，如<code>[实体1]--(关系)-&gt;[实体2]</code><br>
+如果实体之间存在即存在<code>[实体1]--(关系)-&gt;[实体2]</code>，又存在<code>[实体1]&lt;-(关系)--[实体2]</code>，则用<code>[实体1]&lt;-(关系)-&gt;[实体2]</code>表示<br>
+<img src="../../../images/%E8%AE%BA%E6%96%87/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/Knowledge-Graphs-2021/DelG.jpg" alt="DelG" title="DelG"></p>
+<ul>
+<li>与关系模型相比有着更高的灵活性，即可以整合其他数据源的数据，又可以允许不完整数据的存在(用边不存在表示，例如上图中的<code>Food Festival</code>就缺少<code>start</code>, <code>end</code>, <code>name</code>, <code>venue</code>等边)。</li>
+<li>与组织成树的数据结构相比(例如XML, JSON等)，不需要数据满足层次结构，并且允许成环</li>
+<li>基于DelG的标准模型：RDF(Resource Description Framework 资源描述框架)<br>
+节点种类
+<ul>
+<li>IRIs(Internationalized Recourse Identifiers 国际化资源标识符)，用于唯一标记网络上的资源</li>
+<li>literals(翻译成字面量或者常量，我也不知道应该是哪个)，用于表示字符串、整数等数据结构的值</li>
+<li>blank nodes(空白节点)，表示未分配标识符的匿名节点</li>
+</ul>
+</li>
+</ul>
+<h3 id="heterogeneous-graphs异构图"><a class="markdownIt-Anchor" href="#heterogeneous-graphs异构图"></a> Heterogeneous graphs(异构图)</h3>
+<p>异构图指的是图中存在不同类型的节点和边(节点和边至少有一个具有多种类型)<br>
+异构体与上述的DelG及其相似的：DelG的label对应于异构体中边的种类(type)，而DelG中形如<code>[实体]--(type)-&gt;[种类名]</code>的结构对应于异构图中的一个节点<code>[实体:种类名]</code><br>
+<img src="./../../../images/%E8%AE%BA%E6%96%87/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/Knowledge-Graphs-2021/%E5%BC%82%E6%9E%84%E5%9B%BE%E4%B8%8EDelG.jpg" alt="异构图和DelG" title="异构图与DelG"><br>
+若某一条边两端的节点类型相同，则称其是同构的，否则称其是异构的。</p>
+<ul>
+<li>允许节点按照种类分区</li>
+<li>每个节点只能拥有唯一的类型，而DelG可以拥有多个或者0个</li>
+</ul>
 <h2 id="querying"><a class="markdownIt-Anchor" href="#querying"></a> Querying</h2>
 <h1 id="schema-identity-context"><a class="markdownIt-Anchor" href="#schema-identity-context"></a> Schema, Identity, Context</h1>
 <h2 id="schema"><a class="markdownIt-Anchor" href="#schema"></a> Schema</h2>
