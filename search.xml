@@ -2530,11 +2530,11 @@ or</li>
 <p>众所周知，真理是有条件的。以<a href="#DelG">DelG</a>为例，图中的航班并不是一直都有的，有可能是某个时间段才存在。诸如此类的一系列使事实成立的条件被称为上下文(context)。<a href="#DelG">DelG</a>中的上下文没有明确展示出来，但明确的上下文有助于从不同角度理解数据。此外，上下文也可以作用于图的不同水平，如城市建立时间作用于<code>[城市]</code>这类节点，航班存在时间作用于某个航班所对应的边标签等等。</p>
 <h3 id="direct-representation直接表示"><a class="markdownIt-Anchor" href="#direct-representation直接表示"></a> Direct representation(直接表示)</h3>
 <p>一种表示上下文的方法是将其视为数据插入到图中，例如上述的<code>[城市]</code>这类节点，可以插入一些节点与边用于表示上下文，如<code>[城市]--建立于-&gt;[时间]</code>；对于边这类情况，我们首先需要将其转化为节点再直接表示，正如<a href="#DelG%E4%B8%8E%E5%B1%9E%E6%80%A7%E5%9B%BE%E4%B9%8B%E9%97%B4%E7%9A%84%E4%BA%92%E7%9B%B8%E8%BD%AC%E5%8C%96">此图中的Fig. 3</a>。这些例子中的表示法不具有一般性，现在已经有更标准的方法来表示上下文，例如RDF中的时间本体(Time Ontology)，其定义了如何以可交互的方式建立时间实体、时刻、时段以及之间的关系。另一个例子是PROV数据模型中定义了如何在RDF图中描述出处。</p>
-<h3 id="reification具象化"><a class="markdownIt-Anchor" href="#reification具象化"></a> Reification(具象化)</h3>
-<p>直接表示法需要将边转化成点之后才能添加上下文，而具象化则可以直接表示边的上下文。具象化首先将边抽象为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">e</span></span></span></span>，之后再对<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">e</span></span></span></span>添加上下文。下面介绍三种具象化的方法：<br>
-<img src="../../../images/%E8%AE%BA%E6%96%87/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/Knowledge-Graphs-2021/%E5%85%B7%E8%B1%A1%E5%8C%96.jpg" alt="具象化" title="具象化"></p>
+<h3 id="reification物化"><a class="markdownIt-Anchor" href="#reification物化"></a> Reification(物化)</h3>
+<p>直接表示法需要将边转化成点之后才能添加上下文，而物化则可以直接表示边的上下文。物化首先将边抽象为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">e</span></span></span></span>，之后再对<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">e</span></span></span></span>添加上下文。下面介绍三种物化的方法：<br>
+<img src="../../../images/%E8%AE%BA%E6%96%87/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/Knowledge-Graphs-2021/%E7%89%A9%E5%8C%96.jpg" alt="物化" title="物化"></p>
 <ul>
-<li>(a)RDF具象化中，<code>subject</code>、<code>object</code>和<code>predicate</code>分别表示原来边的起点、终点和标签，剩下的都是上下文</li>
+<li>(a)RDF物化中，<code>subject</code>、<code>object</code>和<code>predicate</code>分别表示原来边的起点、终点和标签，剩下的都是上下文</li>
 <li>(b)n-ary关系中，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">e</span></span></span></span>顶替了原本终点的位置，原本的终点则是<code>value</code>指向的点</li>
 <li>©单例属性中，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">e</span></span></span></span>顶替了原本的标签，原本的标签则是<code>singleton</code>指向的点。单例属性使得上下文直接标注在了边标签上</li>
 </ul>
@@ -3172,12 +3172,116 @@ DILIGENT是敏捷方法的早期例子，它提出了本体的声明周期管理
 <h3 id="inconsistency-repairs"><a class="markdownIt-Anchor" href="#inconsistency-repairs"></a> Inconsistency repairs</h3>
 <p>包含公理的本体可能带来不一致性。这些公理可以是专家设计的，也可以是通过符号学习习得的。之后使用这些公理也可能带来不一致。为了纠正知识图谱，光找到不一致的地方是远远不够的，我们还需要纠正他们，但这不是一个轻松的任务。考虑一个简单的情况：现在有互斥的两个类，而某个实体又同时属于这两个类。这里面肯定有一个类是错的，需要被删掉，但删哪个也不容易确定；再扩大点，每个边可能有多种不一致，每种不一致又可能影响很多边。当涉及到蕴含就更难搞了：我们不止得删掉有错的那个，还得把它带来的所有蕴含一并删除。T<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>o</mi><mo>¨</mo></mover></mrow><annotation encoding="application/x-tex">\ddot{o}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66786em;vertical-align:0em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.66786em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">o</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;">¨</span></span></span></span></span></span></span></span></span>pper等人建议人工选择某一类进行修复：删除域或范围的约束、删除互斥的约束、删除表示类型的边、删除被域或范围约束的边。相反，Bonatti等人则提出采用基于最小碰集的自动化方法纠正不一致性。要删除哪条边是根据下述条件决定：边的来源的可信度得分，以及有多少最小碰集的元素要么是这条边，要么可以由这条边蕴含而来。这样就不用再去计算删除这条边后的蕴含了。另一种选择不是修复数据，而是在不一致感知语义下评估query，例如对所有query返回经过修复的一致的答案。</p>
 <h1 id="publication"><a class="markdownIt-Anchor" href="#publication"></a> Publication</h1>
+<p>总有知识图谱是需要发布的，例如志愿者、公共组织或政府制作的知识图谱。发布使得工作可以通过网络防卫全部或部分知识图谱。作为开放数据发布的知识图谱称为开放知识图谱。<br>
+下面首先讨论了指导在web上发布数据的两组原则；然后讨论了构成接口的访问协议，公众可以通过这些接口与知识图谱进行交互；最后酌情考虑了显示知识图谱或其部分访问使用的技术。</p>
 <h2 id="best-practices"><a class="markdownIt-Anchor" href="#best-practices"></a> Best Practices</h2>
+<p>FAIR原则是由Wilkinson等人提出的；链接数据原则是由Berners-Lee提出的。</p>
+<h3 id="fair-principles"><a class="markdownIt-Anchor" href="#fair-principles"></a> FAIR Principles</h3>
+<p>FAIR原则最初是在发布科学数据的背景下提出的，是为了最大限度地提高公共资助的研究的影响力。但这些原则也适用于其他情况，此时数据将以方别外部代理复用的方式发布，其特别强调机器可读性。<br>
+FAIR是四个基本规则的首字母简写，每个规则针对一个目标，这个目标可能作用于数据或元数据。</p>
+<ul>
+<li>可检索性(Findability)是指对数据集可能有益的外部代理可以直接定位到数据集，其四个子目标如下：
+<ul>
+<li>F1：数据和元数据被分配了一个全局唯一的持久标识符</li>
+<li>F2：数据被丰富的元数据所描述</li>
+<li>F3：元数据清楚而明确地包含所描述的数据的标识符</li>
+<li>数据和元数据在可搜索的资源中注册或索引</li>
+</ul>
+</li>
+<li>可访问性(Ascessibility)是指外部代理(一般已经找到了数据集)访问数据集的难易程度，其有两个目标，第一个目标又有两个小目标：
+<ul>
+<li>A1：数据和元数据可以通过其标识符使用标准协议进行检索
+<ul>
+<li>A1.1：协议是开放的、免费的、并且是普遍可行的</li>
+<li>A1.2：协议允许在必要时进行身份验证和授权</li>
+</ul>
+</li>
+<li>A2：既是数据不再可用，元数据也是可访问的</li>
+</ul>
+</li>
+<li>互操作性(Interoperability)是指使用标准工具利用数据集(与其他数据集结合)的难易程度，它有三个目标：
+<ul>
+<li>I1：数据与元数据采用可访问、共享且通用的知识表示形式</li>
+<li>I2：数据和元数据使用遵循FAIR原则的词汇表</li>
+<li>I3：数据和元数据包含对其他数据和元数据的合格引用</li>
+</ul>
+</li>
+<li>可复用性(Reusability)是指数据集可与其他数据集一起复用的难易程度，他有带着三个小目标的一个目标：
+<ul>
+<li>R1：元(数据)用多个准确且相关的属性进行了丰富地描述
+<ul>
+<li>R1.1：数据和元数据通过清晰的、可访问的数据使用许可证发布</li>
+<li>R1.2：数据和元数据与详细的出处相关联</li>
+<li>R1.3：数据和元数据要符合领域相关的社区标准</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>在知识图谱的背景下，已经提出了各种直接或简介有助于满足FAIR原则的词汇、工具和服务。就可检索性而言，IRI内置于RDF中，为全局标识符提供了通用模式。此外，诸如互联数据集词汇(VoID)等资源允许表示有关图的元数据，而DataHub等服务提供此类数据集的中央存储库。允许可访问性的协议和授权机制会写在后面。对于互操作性，本体作为通用知识表示形式，可以反过来用于描述遵循FAIR原则的词汇表。可复用性也在后面讲，之前提到的PROV数据模型则允许捕捉数据的详细出处。<br>
+现有很多知识图谱基于FAIR原则发布，其中Wilkinson等人明确提到一个用于药物发现的数据集成平台Open PHACTS，以及一个大量的蛋白质序列和注释数据集合UniProt是符合FAIR原则的。这两个数据集都通过RDF模型提供了展示内容的图视图。</p>
+<h3 id="linked-data-principles"><a class="markdownIt-Anchor" href="#linked-data-principles"></a> Linked Data Principles</h3>
+<p>Wilkinson等人指出FAIR原则先于如何实现，这意味着这些原则不包括如何实现或应该如何实现这些原则。Berners-Lee提出的链接数据原则比FAIR原则早了近十年，它为实现这些FAIR原则的一种方式提供了技术基础。具体而言，链接数据原则如下：</p>
+<ul>
+<li>使用IRI命名事物</li>
+<li>使用HTTP IRI使得这些名称可以被查找</li>
+<li>查找HTTP IRI时，提供关于实体的有用内容，这些实体的IRI名称采用标准数据格式</li>
+<li>在返回结果中包含指向相关实体的IRI链接</li>
+</ul>
+<p>这些原则最开始是在语义网络中提出的。对于第三条原则，目前推荐使用基于RDF(包括RDFS、OWL等)的标准，因为它们允许使用HTTP IRI命名实体，这为满足所有原则奠定了基础。这些原则概述了图结构的数据在Web上发布的方式，这些图之间相互关联，形成了Berners-Lee所说的数据网络。其目标在于通过令内容不仅在共人类使用的HTML文档中可用，还可以作为机器定位、检索、组合、验证、推理、查询的结构化数据来提高在Web上的自动化程度，朝着自动解决任务的方向发展。从概念上将，数据网络由发布在哥哥网页上的数据图组成，人们可以在其中单击节点或边(准确的说，是HTTP IRI)跳转到Web上其他地方的与节点和边上的内容相关的另一个图，这个过程可以递归地执行下去。<br>
+一个关键的任务对应着第四条原则：需要包含指向相关实体的链接。具体而言，链接发现任务考虑添加链接表示从一个知识图谱指向另一个知识图谱的连接，这可能涉及到包含间接引用外部图的IRI，或涉及到具有特殊语义的链接(比如id链接)。与前面说的链接预测任务不同的是，链接提取任务不是提取单个图内部的链接，而是找到图与图之间的链接，这带来了一些独特的特点：第一，链接发现通常考虑源和目的的不相交节点集；第二，知识图谱经常使用不同的词汇；第三，连接预测任务中存在本地的例子供学习预测，但链接发现任务没有。一种常见的技术是人工制定链接规则(也叫链接规范)，该规则应用启发式方法来定义可能包含相似性度量的链接。链接发现任务可以通过在知识图谱中提供标准标识符方案加速，常见的标准标识符方案有：书籍的ISBN，国家和地区的alpha-2和alpha-3等。作者参考了Nentwig等人关于链接发现的研究。<br>
+现在已经提出了进一步的指导方针，其为发布链接数据提供提供细粒度的建议，涉及如何最好地实施间接引用，需要包含那些类型的链接，如何发布和链接词汇表等。</p>
 <h2 id="access-protocols"><a class="markdownIt-Anchor" href="#access-protocols"></a> Access Protocols</h2>
+<p>发布意味着允许公众与知识图谱进行交互，这需要提供访问协议，协议定义了代理可以做出的响应以及他们可以预期的响应。根据FAIR的可访问性原则，该协议应该是开放、免费且普遍可实施的。在知识图谱的语境里，有很多访问协议可供选择，从允许用户下载所有内容的简单协议到接受和评估日益复杂的请求的协议。<br>
+<img src="../../../images/%E8%AE%BA%E6%96%87/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/Knowledge-Graphs-2021/%E8%AE%BF%E9%97%AE%E5%8D%8F%E8%AE%AE.jpg" alt="访问协议" title="访问协议"><br>
+简单的协议只需要在发布数据的服务器上进行少量运算，但会占用大量带宽；而更复杂的协议允许代理请求更具体的数据，从而降低带宽需求。知识图谱还可以提供多种访问协议，以满足具有不同需求的不同代理。</p>
+<h3 id="dumps"><a class="markdownIt-Anchor" href="#dumps"></a> Dumps</h3>
+<p>转储是指允许下载的一个或一组文件，这组文件包含了知识图谱的内容。这个协议中，请求是针对文件的，而响应则是文件的内容。为了发布转储文件，首先需要具体的语法来序列化图。对于RDF图来说，有基于XML、JSON、自定义语法等各种标准语法可用，但对于属性图来说，目前只有非标准语法可用。其次，为了降低带宽需求，可用采用压缩方案。虽然GZIP和BZip2等标准压缩可用应用于任何文件，但现在已经有专门针对图的压缩算法，这些算法不仅比标准方法有着更好的压缩比，还可以提供额外的功能，例如下载文件后执行高效查找的紧凑索引。最后，为了进一步降低带宽，当知识图谱更新时，可以计算并发布差异，这样可以避免代理重新下载。然而，转储只适用于某些情况，特别是对于希望维护知识图谱的完整本地副本的代理。如果代理只对一小部分感兴趣，那下载整个转储就需要传输和处理大量不相关数据。</p>
+<h3 id="node-lookups"><a class="markdownIt-Anchor" href="#node-lookups"></a> Node lookups</h3>
+<p>执行节点查找的协议接受节点请求(一般用id表示节点)并返回描述该节点的(子)图。这样的协议是前面说的连接数据原则的基础，其中节点查找是通过HTTP间接引用实现的，这进一步允许了从Web上引用其他图中的节点。尽管对于应该为节点返回哪些内容有不同的定义，一个常见的约定是返回一个子图，这个子图包含了改节点的所有出边和入边。尽管简单，但可以利用节点查找协议的接口实现对图的查询。然而，如果没有声明其实节点或节点查找服务不返回入边，这种策略就不可行了。此外，客户端代理可能需要请求比需求更多的数据。节点查找的优点是让服务器支持节点查找的代价不高，很便宜。</p>
+<h3 id="edge-patterns"><a class="markdownIt-Anchor" href="#edge-patterns"></a> Edge patterns</h3>
+<p>边模板(在DelG中对应的是三元模板)是一个单例图模板，即只有一条边的图模板。针对边模板的协议接受一个边模板的请求并返回所有满足该模板的边。边模板相比节点查找更为灵活，因为边模板相较于节点查找更容易实现图模板。与节点查找相似的是，响应边模板请求的服务器成本相对较低且易于预测。然而服务器可能经常需要将不相关的中间结果返回给客户端。如果客户端无法访问有关知识图谱的统计信息以更好的计划如何执行连接，那这个问题会更加严重。因此提出了对边模板协议的扩展，以允许更有效的连接，例如允许批量发送解决方案，但仅返回与请求中最兼容的那罐解决方案的结果。</p>
+<h3 id="comples-graph-patterns"><a class="markdownIt-Anchor" href="#comples-graph-patterns"></a> (Comples) graph patterns</h3>
+<p>另一种选择是让客户端发送复杂图模板请求，然后服务器仅返回最终的解决方案。与之前的协议相比，这个协议更高效地利用了带宽：它允许客户端发出更具体的请求，而服务器可以返回更具体的响应。然而，带宽需求的减少带来的是服务器响应请求的代价的提升，并且单个请求的成本更加难以预测。虽然有各种优化引擎可以优化计算图模板的估计，但这个问题还是很棘手。也因为这个原因，支持这种协议的服务经常出现停机、超时、返回部分结果、响应时间长等问题。尽管如此，流行的服务器每天仍会接受并成功估计数百万个查询请求，并且很少遇到最差的情况。</p>
+<h3 id="other-protocols"><a class="markdownIt-Anchor" href="#other-protocols"></a> Other protocols</h3>
+<p>上面给出了常见的协议，但实际上还存在很多其他协议。例如，为了更准确地支持复杂图模板，可以考虑更复杂的请求，例如带蕴含的请求，允许递归的请求，将远程服务器的结果并入查询中生成复合查询，甚至假设可以响应任何图灵完备的查询。而且如本章开头说的那样，服务器也可以选择支持多种互补的协议。</p>
 <h2 id="usage-control"><a class="markdownIt-Anchor" href="#usage-control"></a> Usage Control</h2>
+<h3 id="licensing"><a class="markdownIt-Anchor" href="#licensing"></a> Licensing</h3>
+<p>为了将机器可读许可证和知识图谱关联起来，W3C开放数字版权语言(ODRL)提供了一个信息模型和相关词汇表，可用于指定与资产相关的操作的许可、职责和禁令。ORDL支持数字权利的细粒度描述，这些可以被嵌入进图中。从建模的角度来看，ODRL可用于对几个指明的许可证系列进行建模，例如Apache、CC、BSD。除此之外，Cabrio等人还提出了从非结构化的文本中提取机器可读许可证的方法。从推理的角度来看，许可证兼容性验证和组合技术课用于组合由不同许可证管理的知识图谱。数据许可证清算中心(DALICC)采用了此类技术，该中心包括标准机器可读许可证库，以及是用户呢呢狗编写任意自定义许可证并验证不同许可证之间兼容性的工具。</p>
+<h3 id="usage-policies"><a class="markdownIt-Anchor" href="#usage-policies"></a> Usage policies</h3>
+<p>基于边模式的访问控制策略课用于限制部分访问知识图谱。Web访问控制(WAC)是一个采用WebID验证并提供指定访问控制策略词汇表的访问控制框架。现在也已经扩展了WAC词汇表以捕捉隐私偏好并满足上下文约束。ODRL主要用于指定许可证，近年来也提出了指定访问策略和监督义务的配置文件，这在Kirrane的研究中有讨论。<br>
+作为访问控制的概括，使用策略指定如何使用数据，即可以应用哪些类型的处理，由谁处理、出于什么目的处理等。SPECIAL H2020项目和DPVCG提出了使用策略的词汇表。一旦指定，使用策略可用于验证数据处理是否符合法律规范以及主题是否同意。</p>
+<h3 id="encryption"><a class="markdownIt-Anchor" href="#encryption"></a> Encryption</h3>
+<p>可以采用加密机制代替访问控制。最直接的方式使用一个密钥加密整个图或子图，但也可以对图中的单个节点或边标签执行更细粒的加密，从而使不同客户端通过不同的密钥访问不同的信息。CryptOntology课进一步用于在知识图谱中嵌入所使用的加密机制的详细信息。为了授予对明文的访问权限，一种方法是使用对称密钥加密各个边，以允许特定类型的边模板只能由具有适当密钥的客户端执行。然而，这种方法的一个关键限制是它需要常识解密所有边以找到所有可能的解决方案。一种效率更高的替代方案是结合功能加密和专门的索引来从加密图中检索解决方案，而不需要遍历所有边。</p>
+<h3 id="anonymisation"><a class="markdownIt-Anchor" href="#anonymisation"></a> Anonymisation</h3>
+<p>拿之前常用的旅游局的例子来说，假如旅游局要根据旅客信息情况规划交通，这就会带来数据安全方面的问题，因此最好将个人信息删除以防止个人信息泄露。<br>
+匿名化的第一种方法是控制并概括图中的知识，使得无法识别个体的内容，这可以基于k匿名算法和l-diversity算法。在图上使用k匿名算法将识别和抑制“准标识符”，这允许将给定的个体与少于k-1个其他个体区分开来。然而，在图的语境中，领域攻击(使用邻居的信息)可以破坏k匿名性。<br>
+更复杂的领域攻击依赖于更抽象的图模板，现已观察到可以纯粹根据图结构的知识实现个人的去匿名化，既是所有节点和边都变成空白节点也行。例如，我们现在知道一个由k-1个球员组成的球队一起坐飞机去了一定数量的客场比赛，那我们就可以利用领域攻击锁定这k-1个球员。因此提出了很多针对图的特殊方法保证个体不会因为度而被去匿名化攻击，这包括了k度匿名技术。这类方法对图做最小程度的修改，使得每个节点至少有k-1个具有相同度的其他节点。k同构领域匿名是更强大的一种技术，即使攻击者知道了个体的领域结构也不能通过邻居攻击去匿名化。这是通过修改图来确保每个节点都有个节点的领域结构与自身的同构。这两种方法都只能防止具有有限领域信息的攻击者。一个更强大的概念是k自同构，它确保每个节点在结构上与k-1个节点没区别，从而避免了任何基于结构信息的攻击。最初是由社交网络推动了用于图数据匿名化的技术，而且这些技术也可以用于知识图谱，Lin和Tripunitara的工作就将n自同构应用于DelG中。<br>
+上述方法是对数据匿名，第二种方法是对查询的响应匿名，例如在响应中加入噪声以保护隐私。一种方法是使用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">ϵ</span></span></span></span>差分隐私来查询图。这种机制通常用于聚合查询，其中添加噪声以避免个人信息泄露。这些方法需要丢掉信息以更好的保护隐私，因此选择哪种方法很大程度上取决于任务。如果要将匿名数据作为“转储”发布，则可以使用基于k匿名算法的方法来保护个体，而采用l-diversity的方法来保护群体。另一方面，如果要部分地通过查询接口提供数据，那<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">ϵ</span></span></span></span>差分隐私更适合加入框架。</p>
 <h1 id="knowledge-graphs-in-practice"><a class="markdownIt-Anchor" href="#knowledge-graphs-in-practice"></a> Knowledge Graphs in Practice</h1>
+<p>这部分介绍过去几年出现的一些著名的知识图谱。首先是开放知识图谱，这些知识图谱根据前面说的指南和协议在Web上发布。然后是各公司根据不同应用创建的企业知识图谱。</p>
 <h2 id="openknowledge-graphs"><a class="markdownIt-Anchor" href="#openknowledge-graphs"></a> OpenKnowledge Graphs</h2>
+<p>这里说的开放知识图谱，特指在开放数据哲学下发布的知识图谱，即“开放意味着任何人都可以出于任何目的自由访问、使用、修改和共享(最多遵守说明出处的开放性要求)”。许多开放知识图谱都以链接开放数据集的形式发布，他们遵守开放数据哲学的链接数据原则。许多著名的开放知识图谱涵盖多个领域，代表了宽泛多样的实体和关系。后面也会介绍一些特定领域目前可用的开放知识图谱。介绍的大部分知识图谱都是采用RDF模型，村中链接数据原则发布，并且通过转储访(RDF)、节点查找(链接数据)、图模板(SPARQL)、边模板(三元模板)提供访问接口。</p>
+<h3 id="dbpedia"><a class="markdownIt-Anchor" href="#dbpedia"></a> DBpedia</h3>
+<p>DBpedia项目的开发时为了提取嵌入在维基百科文档中的半结构化数据，从而能够以统一的方式集成、处理和查询这些数据。提取的知识图谱会链接到外部的开放资源，包括图像、网页和外部数据集，如DailMed、DruBank、GeoNames、MusicBrainz、New York Times和WordNet。DBpedia提取框架分为几个组件，对应于维基百科文章源、图存储和序列化目标、wiki标记提取器、解析器和提取管理器的抽象。也设计了特殊的提取器用于处理标签、摘要、跨语言链接、图像、重定向、页面消歧、外部链接、内部连接、主页、类别和位置信息等。DBpedia的知识图谱中的内容不仅是多领域的，还是多语言的：截止到2012年，DBpedia已经有97中语言的标签和摘要。为了适应不同的应用需求，DBpedia内的实体被文飞了四个不同的schemata，这些schemata包括：表示维基百科类别的简单知识组织系统(SKOS)，Yet Another Great Ontology分类schema(YAGO)，Upper Mapping and Binding Exchange Layer(UMBEL)本体分类schema，和一个名为DBpedia本体的自定义schema，包括Person、Place、Organisation和Work等类。为了和动态维基百科文章保持一致，DBpedia还支持实时同步。</p>
+<h3 id="yet-another-great-ontology"><a class="markdownIt-Anchor" href="#yet-another-great-ontology"></a> Yet Another Great Ontology</h3>
+<p>YAGO同样从维基百科中提取图结构的数据，然后与WordNet的层次结构相结合，创建“具有高质量和覆盖率的轻量级可扩展本体”。这种知识图谱旨在应用于各种信息技术任务，例如机器翻译、词义消歧、查询扩展、文档分类、数据清洗、信息集成等。早期技术采用模式匹配、自然语言处理和统计学习的方法从文本中自动提取结构化知识，但这些提取的内容和人工提取的相比质量不高。但是人工的成本高，覆盖率低，也难以保持数据是最新的。为了提取高覆盖率和高质量数据，YAGO主要从维基百科的信息框和类别页面中提取数据，其中报刊特定类别的基本实体信息和文章列表，这些反过来有又契合了WordNet的分层概念。一个称为YAGO模型的schema提供了在RDFS中定义的词汇，该模型允许将单词表示为实体，并捕获同义词和歧义。这个模型进一步支持物化、n元关系和数据类型。YAGO的物化机制包括规范化，即每个边和节点都映射到了一个独一无二的id并且去除了重复的元素；除此之外还包括类型检查，即某个被删除的节点无法通过演绎或推理技术分配给某个类。YAGO将在之后的纪念中扩展对时空上下文和多语言维基百科的支持。</p>
+<h3 id="freebase"><a class="markdownIt-Anchor" href="#freebase"></a> Freebase</h3>
+<p>Freebase是人类知识的集合，它旨在解决与语义网络的分散性相关的一些大规模信息集成问题，例如采样不均衡、应用上的困难和分布式查询的性能限制。与DBpedia和YAGO不同的是，Freebase不是从维基百科或WordNet中提取的，而是直接从人类编辑那征求意见。Freebase平台包括：一个具有版本控制机制的可扩展数据存储，一个用于存储文本、图像和媒体文件的大型数据对象存储(LOB)，支持Metaweb查询语言(MQL)的查询API，Web用户接口和一个轻量级打字系统。最后这个搭子系统是为了支持协同创作过程而设计的。该系统不强调本体的正确性或逻辑一致性，而是被实现为允许不兼容的类型和属性共存的结构机制的松散集合，可以通过Web用户界面以交互的方式添加内容到Freebase，亦或者通过API的写入功能自动添加。Freebase于2010年被谷歌收购，其中的内容构成了谷歌2012年公布的谷歌知识图谱的重要组成部分。当Freebase在2015年3月变为只读时，其中的知识图谱以包含超过30亿条边。它里面的大部分数据随后被迁移到了Wikidata中。</p>
+<h3 id="wikidata"><a class="markdownIt-Anchor" href="#wikidata"></a> Wikidata</h3>
+<p>维基百科中包含大量嵌入在信息框、列表、表格等中的半结构化数据。然而，这些数据传统上是人工整理更新不同语言的文章。人工管理导致了各种数据质量问题，包括不同文章、语言中矛盾的数据。因此Wikipedia基金会使用Wikidate作为一个集中的、协同编辑的知识图谱，为维维基百科以及任意其他用户提供数据。在这个愿景下，一个事实可以只添加一次到Wikidata中，然后触发维基百科中潜在的自动更新机制，在大量跨语言文章中更新。与维基百科一样，Wikidata也被视为二级来源，其中包含应用主要来源的声明(声明可以最初就添加而不用参考)。Wikidata进一步允许就潜在矛盾的主张提出不同的观点。Wikidata是多语言的，其中节点和边被分配了与语言无关的Qxx和Pxx代码，随后与各种语言的标签、别名和描述相关联，从而允许这些语言出现声明。Wikidata不仅允许在数据级别进行协同编辑，还允许在schema级别进行协同创作，允许用于添加或修改轻量级语义、公理和shape。Wikidata提供了各种访问协议并且这些协议被广泛使用，这些协议被维基百科用于在某些领域中生成信息框，被谷歌支持，被用作Siri等著名应用的数据源。</p>
+<h3 id="other-open-cross-domain-knowledge-graphs"><a class="markdownIt-Anchor" href="#other-open-cross-domain-knowledge-graphs"></a> Other open cross-domain knowledge graphs</h3>
+<p>多年来，已经开发了许多其他跨领域的知识图谱。一个和YAGO类似的BabelNet基于统一的WordNet和维基百科，但集成了其他知识图谱，并专注于通过将维基词典和OmegaWiki等词典资源转换为知识图谱来创建多语言词汇形式的词典。与其他知识图谱相比，BabelNet等词汇化知识图谱将维基百科中的百科信息与单语和双语词典中常见的词典信息结合在一起。<br>
+Cyc项目旨在以机器可读的方式对常识进行编码。自1986年以来，每年有超过900人努力，并且已经创建了22-万个事实和规则。尽管Cyc是专有的，但也发布了一个名为OpenCyc的开放子集。<br>
+自2010年起，NELL项目就采用OIE方法从网页的文本中提取了一个有着1.2亿条边的图。每个这样的知识图谱都讲论文中讨论的语言和技术的不同组合应用在了不同来源中并得到了不同结果。</p>
+<h3 id="domain-specific-open-knowledge-graphs"><a class="markdownIt-Anchor" href="#domain-specific-open-knowledge-graphs"></a> Domain-specific open knowledge graphs</h3>
+<p>很多领域都有着自己的开放知识图谱。Schemachtenberg等人确定了关联数据上下文中最突出的领域如下：与新闻、电视、广播等有关的媒体；与公开数据以促进透明度和发展有关的政府；设计各个学科学术文献的出版物；与名胜和地区相关的地理领域；与蛋白质、基因、药物、疾病等相关的生命科学和与评论、开源项目等相关的用户创造的内容。除此之外文化遗产、音乐、法律、神学、旅游等领域也有自己的开放知识图谱。此类知识图谱的设想应用于产生它们的领域一样多种多样，但通常与集成、推荐、透明度、归档、去中心化、多语言支持、法规遵从性的有关。</p>
 <h2 id="enterprise-knowledge-graphs"><a class="markdownIt-Anchor" href="#enterprise-knowledge-graphs"></a> Enterprise Knowledge Graphs</h2>
+<h3 id="web-search"><a class="markdownIt-Anchor" href="#web-search"></a> Web search</h3>
+<h3 id="commerce"><a class="markdownIt-Anchor" href="#commerce"></a> Commerce</h3>
+<h3 id="social-networks"><a class="markdownIt-Anchor" href="#social-networks"></a> Social networks</h3>
+<h3 id="finance"><a class="markdownIt-Anchor" href="#finance"></a> Finance</h3>
+<h3 id="other-industries"><a class="markdownIt-Anchor" href="#other-industries"></a> Other industries</h3>
 <h1 id="summary-and-conclusion"><a class="markdownIt-Anchor" href="#summary-and-conclusion"></a> Summary and Conclusion</h1>
 <h1 id="附录"><a class="markdownIt-Anchor" href="#附录"></a> 附录</h1>
 <p>不是论文中的东西，主要是把论文中遇到的没学的知识补上</p>
