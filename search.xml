@@ -105,6 +105,7 @@ next/_config.yml中改为:</li>
 行
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">换</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">行</span><span class="mord cjk_fallback">换</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cjk_fallback">行</span></span></span></span></span></p>
 </blockquote>
+<table> </table>
 <h1 id="常用数学表达式"><a class="markdownIt-Anchor" href="#常用数学表达式"></a> 常用数学表达式</h1>
 <h2 id="上下标"><a class="markdownIt-Anchor" href="#上下标"></a> 上下标</h2>
 <p>语法:</p>
@@ -346,7 +347,7 @@ c-10 4-16 7.7-18 11 0 8.7 6 14.3 18 17 47.3 18.7 87.8 47 121.5 85S196 441.3 208
 </tr>
 </tbody>
 </table>
-<h2 id="雅蠛蝶删除线"><a class="markdownIt-Anchor" href="#雅蠛蝶删除线"></a> 雅蠛蝶(删除线)</h2>
+<h2 id="删除线"><a class="markdownIt-Anchor" href="#删除线"></a> 删除线</h2>
 <p>语法:</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\cancle{主对角线} \\</span><br><span class="line">\bcancle{副对角线} \\</span><br><span class="line">\xcancle{x形} \\</span><br></pre></td></tr></tbody></table></figure>
 <p>效果:</p>
@@ -356,7 +357,7 @@ c-10 4-16 7.7-18 11 0 8.7 6 14.3 18 17 47.3 18.7 87.8 47 121.5 85S196 441.3 208
 \xcancel{x形} \\
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cancel-lap"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord cancel-pad"><span class="mord cjk_fallback">主</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">角</span><span class="mord cjk_fallback">线</span></span></span><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span style="height:0em;"><svg width="100%" height="0em"><line x1="0" y1="100%" x2="100%" y2="0" stroke-width="0.046em"></line></svg></span></span></span></span></span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord cancel-lap"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord cancel-pad"><span class="mord cjk_fallback">副</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">角</span><span class="mord cjk_fallback">线</span></span></span><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span style="height:0em;"><svg width="100%" height="0em"><line x1="0" y1="0" x2="100%" y2="100%" stroke-width="0.046em"></line></svg></span></span></span></span></span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord cancel-lap"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.43056em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord cancel-pad"><span class="mord mathdefault">x</span><span class="mord cjk_fallback">形</span></span></span><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span style="height:0.43056em;"><svg width="100%" height="0.43056em"><line x1="0" y1="0" x2="100%" y2="100%" stroke-width="0.046em"></line><line x1="0" y1="100%" x2="100%" y2="0" stroke-width="0.046em"></line></svg></span></span></span></span></span></span></span><span class="mspace newline"></span></span></span></span></p>
 </blockquote>
-<h2 id="变成的形状了~"><a class="markdownIt-Anchor" href="#变成的形状了~"></a> 变成**的形状了~</h2>
+<h2 id="字体"><a class="markdownIt-Anchor" href="#字体"></a> 字体</h2>
 <p>语法:</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">\字体{文本}</span><br></pre></td></tr></tbody></table></figure>
 <p>效果:</p>
