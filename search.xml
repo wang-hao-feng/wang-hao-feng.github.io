@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo\Hexo搭建博客</title>
+    <title>Hexo搭建博客</title>
     <url>/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<html><head></head><body><h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
 <p>用Hexo搭建个人博客时用到的一些博客, 把网址留下<s>说不定以后会用到</s><br>
@@ -2230,7 +2230,7 @@ or</li>
 <h3 id="heterogeneous-graphs异构图"><a class="markdownIt-Anchor" href="#heterogeneous-graphs异构图"></a> Heterogeneous graphs(异构图)</h3>
 <p>异构图指的是图中存在不同类型的顶点和边(顶点和边至少有一个具有多种类型)<br>
 异构体与上述的DelG及其相似的：DelG的label对应于异构体中边的种类(type)，而DelG中形如<code>[实体]--(type)-&gt;[种类名]</code>的结构对应于异构图中的一个顶点<code>[实体:种类名]</code><br>
-<img src="./../../../images/%E8%AE%BA%E6%96%87/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/Knowledge-Graphs-2021/%E5%BC%82%E6%9E%84%E5%9B%BE%E4%B8%8EDelG.jpg" alt="异构图和DelG" title="异构图与DelG"><br>
+<img src="../../../images/%E8%AE%BA%E6%96%87/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/Knowledge-Graphs-2021/%E5%BC%82%E6%9E%84%E5%9B%BE%E4%B8%8EDelG.jpg" alt="异构图和DelG" title="异构图与DelG"><br>
 若某一条边两端的顶点类型相同，则称其是同构的，否则称其是异构的。</p>
 <ul>
 <li>允许顶点按照种类分区</li>
@@ -3979,7 +3979,7 @@ eBay提出了另一个商贸知识图谱，它对产品描述和用户的购物�
       </tags>
   </entry>
   <entry>
-    <title>wsl//wsl</title>
+    <title>wsl</title>
     <url>/wsl/</url>
     <content><![CDATA[<html><head></head><body><h1 id="基本命令"><a class="markdownIt-Anchor" href="#基本命令"></a> 基本命令</h1>
 <p><a href="https://docs.microsoft.com/zh-cn/windows/wsl/basic-commands">Microsoft官方文档</a></p>
@@ -3995,5 +3995,175 @@ eBay提出了另一个商贸知识图谱，它对产品描述和用户的购物�
         <tag>笔记</tag>
         <tag>wsl</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>论文//鲁棒性//Pretrained_Transformers_Improve_Out-of-Distribution_Robustness</title>
+    <url>/%E9%B2%81%E6%A3%92%E6%80%A7/Pretrained_Transformers_Improve_Out-of-Distribution_Robustness/</url>
+    <content><![CDATA[<html><head></head><body><p>原文地址：<a href="https://aclanthology.org/2020.acl-main.244/">ACL2020</a></p>
+<span id="more"></span>
+<!-- 第2章 -->
+<h1 id="测试鲁棒性的方法"><a class="markdownIt-Anchor" href="#测试鲁棒性的方法"></a> 测试鲁棒性的方法</h1>
+<!-- 2.1 -->
+<h2 id="数据集"><a class="markdownIt-Anchor" href="#数据集"></a> 数据集</h2>
+<p>为了使训练集和测试集分布不同，作者采用了两类数据集：</p>
+<ul>
+<li>数据集本身具有可以划分的元素</li>
+<li>与另一个数据集分布不同</li>
+</ul>
+<p>文中列举了作者选择的四个数据集用于情感分类</p>
+<ul>
+<li><em>SST-2</em>与<em>IMDb</em>，前者是短而精练的影评，后者是长影评</li>
+<li><em>Yelp Review Dataset</em>是一个餐厅评价数据集，可以通过菜系这一元素划分，例如中餐、法餐、意大利菜、日料等等</li>
+<li><em>Amazon Review Dataset</em>是亚马逊上的产品评价，作者将其中的服装分为了五类（例如男装、女装、童装），娱乐分为了两类（音乐和电影）</li>
+</ul>
+<p>又列举了四个数据集用于情感相似度计算</p>
+<ul>
+<li><em>STS-B</em>多个来源和类别的语句，作者使用其中两种类别四个来源的数据（新闻类别：MSRpar、Headline；字幕类别：MSRvid、Images），并使用皮尔逊相关系数作为评价。</li>
+<li><em>ReCoRd</em>是一个阅读理解数据集，其段落来源于CNN和每日邮报，作者根据来源划分数据，并互相验证</li>
+<li><em>MNLI</em>包含了多个来源组成的句子对，作者选取了电话、面对面交流、信件三种交流方式</li>
+</ul>
+<!-- 2.2 -->
+<h2 id="embedding方式与模型"><a class="markdownIt-Anchor" href="#embedding方式与模型"></a> Embedding方式与模型</h2>
+<ul>
+<li>词袋模型，作者认为，由于词袋模型高偏差低方差，因此其表现应该很稳定。但由于其在其他任务上表现不好，因此只在情感分析和<em>STS-B</em>数据集上使用</li>
+<li>使用word2vec或CloVe编码，编码结果送入<a href="https://arxiv.org/abs/1511.08198">word average</a>、LSTM或CNN，后续则根据具体任务单独设计</li>
+<li>采用了BERT族的预训练模型。BERT-base使用哦GELU激活函数。为了研究预训练模型使用数据大小与鲁棒性的关系，分别使用了BERT-base、BERT-large和RoBERTa。为了研究知识蒸馏，使用ALBERT蒸馏BERT和DistilBERT。作者的实验遵从(Bert微调程序)[BERT: pre-training of<br>
+deep bidirectional transformers for language under-<br>
+standing]进行微调</li>
+</ul>
+<!-- 第3章 -->
+<h1 id="ood样例实验"><a class="markdownIt-Anchor" href="#ood样例实验"></a> OOD样例实验</h1>
+<p>本章介绍了使用第二章的实验设置所得出的结论，其中预训练模型是微调。</p>
+<ul>
+<li>预训练模型鲁棒性更好</li>
+<li>更大的模型并不代表效果更好</li>
+<li>蒸馏会降低鲁棒性</li>
+<li>丰富多样的训练数据更能提升鲁棒性</li>
+</ul>
+<!-- 第4章 -->
+<h1 id="ood判别实验"><a class="markdownIt-Anchor" href="#ood判别实验"></a> OOD判别实验</h1>
+<p>本章通过给定样例让模型判断其是否是OOD样本，采用FPR95作为评价指标。实验表明除了预训练模型外的其他模型判别能力都不高，但预训练模型也还有很大的提升空间。</p>
+</body></html>]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>论文</category>
+        <category>鲁棒性</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>论文</tag>
+        <tag>鲁棒性</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LayoutLMv3结构</title>
+    <url>/LayoutLMv3%E7%BB%93%E6%9E%84/</url>
+    <content><![CDATA[<html><head></head><body><p><a href="https://github.com/microsoft/unilm/tree/master/layoutlmv3/layoutlmft/models/layoutlmv3">LayoutLMv3源码github地址</a></p>
+<p>针对modeling_layoutlmv3.py文件的源码解析</p>
+<span id="more"></span>
+<h1 id="模块联系"><a class="markdownIt-Anchor" href="#模块联系"></a> 模块联系</h1>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">digraph module_archidecture{</span><br><span class="line">    /*input*/</span><br><span class="line">    {rank="same"; image; documents; bboxs}</span><br><span class="line">    </span><br><span class="line">    image[shape=box, style=rounded];</span><br><span class="line">    documents[shape=box, style=rounded];</span><br><span class="line">    bboxs[shape=box, style=rounded];</span><br><span class="line"></span><br><span class="line">    /*embedding*/</span><br><span class="line">    {rank="same"; PatchEmbedding; LayoutLMv3Embeddings;}</span><br><span class="line"></span><br><span class="line">    PatchEmbedding[shape=box];</span><br><span class="line">    LayoutLMv3Embeddings[shape=box, ];</span><br><span class="line"></span><br><span class="line">    PatchEmbedding -&gt; image [dir=back];</span><br><span class="line">    LayoutLMv3Embeddings -&gt; documents [dir=back];</span><br><span class="line">    LayoutLMv3Embeddings -&gt; bboxs [dir=back];</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h1 id="layoutlmv3attention"><a class="markdownIt-Anchor" href="#layoutlmv3attention"></a> LayoutLMv3Attention</h1>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">digraph LayoutLMv3Attention{</span><br><span class="line">    input[shape=box];</span><br><span class="line">    LayoutLMv3SelfAttention[shape=box];</span><br><span class="line"></span><br><span class="line">    subgraph cluster_RobertaSelfOutput{</span><br><span class="line">        label="RobertaSelfOutput";</span><br><span class="line">        Linear[shape=box];</span><br><span class="line">        LayerNorm[shape=box];</span><br><span class="line">        Dropout[shape=box];</span><br><span class="line"></span><br><span class="line">        LayerNorm -&gt; Dropout [dir=back];</span><br><span class="line">        Dropout -&gt; Linear [dir=back];</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    Linear -&gt; LayoutLMv3SelfAttention [dir=back];</span><br><span class="line">    LayoutLMv3SelfAttention -&gt; input [dir=back];</span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h1 id="layoutlmv3layer"><a class="markdownIt-Anchor" href="#layoutlmv3layer"></a> LayoutLMv3Layer</h1>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">digraph LayoutLMv3Layer{</span><br><span class="line">    input[shape=box];</span><br><span class="line">    LayoutLMv3Attention[shape=box];</span><br><span class="line"></span><br><span class="line">    subgraph cluster_RobertaIntermediate{</span><br><span class="line">        label = "RobertaIntermediate";</span><br><span class="line">        RobertaIntermediate_Linear[shape=box, label="Linear"];</span><br><span class="line">        Activation_Function[shape=box];</span><br><span class="line"></span><br><span class="line">        Activation_Function -&gt; RobertaIntermediate_Linear [dir=back];</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    subgraph cluster_RobertaOutput{</span><br><span class="line">        label = "RobertaOutput";</span><br><span class="line">        RobertaOutput_Linear[shape=box, label="Linear"];</span><br><span class="line">        LayerNorm[shape=box];</span><br><span class="line">        Dropout[shape=box];</span><br><span class="line"></span><br><span class="line">        LayerNorm -&gt; Dropout [dir=back];</span><br><span class="line">        Dropout -&gt; RobertaOutput_Linear [dir=back];</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    RobertaOutput_Linear -&gt;  Activation_Function [dir=back];</span><br><span class="line">    RobertaIntermediate_Linear -&gt; LayoutLMv3Attention [dir=back];</span><br><span class="line">    LayoutLMv3Attention -&gt; input [dir=back];</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></body></html>]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>调研</title>
+    <url>/VQA/%E8%B0%83%E7%A0%94/</url>
+    <content><![CDATA[<!--无监督 小样本 可迁移--><!--价值
+    现有方法优缺点，如何解决
+    数据集
+    评价--><html><head></head><body><h1 id="acl2022"><a class="markdownIt-Anchor" href="#acl2022"></a> ACL2022</h1>
+<h2 id="hypergraph-transformer-weakly-supervised-multi-hop-reasoning-for-knowledge-based-visual-question-answering"><a class="markdownIt-Anchor" href="#hypergraph-transformer-weakly-supervised-multi-hop-reasoning-for-knowledge-based-visual-question-answering"></a> Hypergraph Transformer: Weakly-Supervised Multi-hop Reasoning for Knowledge-based Visual Question Answering</h2>
+<p>任务：基于知识库的VQA</p>
+<p>难点：</p>
+<ol>
+<li>需要多跳推理</li>
+<li>没有数据监督推理过程的学习</li>
+<li></li>
+</ol>
+<p>方法分类：</p>
+<ul>
+<li>基于memory的方法：以memory的形式表示知识，使用时与query计算注意力得分，使用得分高的进行推理</li>
+<li>基于图的方法：在知识库中检索出问题相关的知识并推理（本文方法）</li>
+</ul>
+<p>问题：过度平滑，多跳推理过程中，信息反复传递导致相连的节点特征过于相似</p>
+<p>方法：</p>
+<ol>
+<li>实体链接：将问题和图片中的实体与知识库中链接</li>
+<li>构造问题超图（一条链）和问题启发的知识超图</li>
+<li>利用attention机制进行推理</li>
+</ol>
+<p><img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/Hypergraph_Transformer.jpg" alt=""></p>
+<p>Benchmark:</p>
+<ol>
+<li>KVQA：关注图片中命名实体的VQA数据集，所需的知识区别于常识</li>
+<li>FVQA：提供常识的VQA数据集</li>
+<li>PQ和PQ-Large：用于测试纯文本的多跳推理能力</li>
+</ol>
+<p><img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/Hypergraph_Tramsformer_KVQA%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C.jpg" alt="KVQA实验结果"><br>
+<img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/Hypergraph_Tramsformer_PQ%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C.jpg" alt="PQ实验结果"></p>
+<p>消融实验：<br>
+<img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/Hypergraph_Tramsformer_%E6%B6%88%E8%9E%8D%E5%AE%9E%E9%AA%8C.jpg" alt="消融实验结果"><br>
+SA: self-attention, GA：guided-attention</p>
+<h2 id="premise-based-multimodal-reasoning-conditional-inference-on-joint-textual-and-visual-clues"><a class="markdownIt-Anchor" href="#premise-based-multimodal-reasoning-conditional-inference-on-joint-textual-and-visual-clues"></a> Premise-based Multimodal Reasoning: Conditional Inference on Joint Textual and Visual Clues</h2>
+<p>提出了一个新数据集PMR：<br>
+除了图像外，还给了一个描述图片背景的“前提”，预测后续会发生的事件，四选一<br>
+缺少背景不影响回答事实类问题，但无法复杂问题带来的模棱两可的问题</p>
+<p>对抗样本：从其他问题中选取相似但不正确的选项与正确答案组合<br>
+实验结果:<br>
+<img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/PMR%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C.jpg" alt="PMR实验结果"><br>
+<img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/PMR%E9%80%89%E9%A1%B9%E5%88%86%E5%B8%83.jpg" alt="PMR选项分布"></p>
+<h2 id="modeling-temporal-modal-entity-graph-for-procedural-multimodal-machine-comprehension"><a class="markdownIt-Anchor" href="#modeling-temporal-modal-entity-graph-for-procedural-multimodal-machine-comprehension"></a> Modeling Temporal-Modal Entity Graph for Procedural Multimodal Machine Comprehension</h2>
+<p>任务：多模态程序文件阅读理解</p>
+<p>数据集：</p>
+<ol>
+<li>RecipeQA 关于食谱的问答数据集</li>
+<li>CraftQA  本文提出的一个数据集，关于教程的问答数据集</li>
+</ol>
+<p>方法：TMEG<br>
+构建一个实体级别的时序图，再将图和节点编码送入模型中<br>
+<img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/TMEG%E6%A8%A1%E5%9E%8B%E7%BB%93%E6%9E%84.jpg" alt="TMEG模型结构"><br>
+<img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/TMEG%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C.jpg" alt="TMEG实验结果"></p>
+<h2 id="clip-models-are-few-shot-learners-empirical-studies-on-vqa-and-visual-entailment"><a class="markdownIt-Anchor" href="#clip-models-are-few-shot-learners-empirical-studies-on-vqa-and-visual-entailment"></a> CLIP Models are Few-shot Learners: Empirical Studies on VQA and Visual Entailment</h2>
+<p>任务：zero-shot/few-show视觉文本理解，包括VQA和VE</p>
+<p>VQA zero-shot难点：如何减小预训练任务与问答任务之间的差距</p>
+<ol>
+<li>自动将问题传化成填空模板，包括使用T5和依存分析两种方法</li>
+<li>使用T5填空，生成候选答案</li>
+</ol>
+<p>测试跨模态迁移能力：训练时将图像替换成文本，推理时仍采用图像文本对<br>
+实验发现微调bias和norm层参数比Frozen方法更好</p>
+<p>数据集：<br>
+VQAv2、SNLI-VE</p>
+<p>实验结果：<br>
+<img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/VQA%20zero-shot%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C.jpg" alt="VQA zero-shot"><br>
+<img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/VE%20zero-shot%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C.jpg" alt="VE zero-shot"><br>
+<img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/VQA%20few-shot%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C.jpg" alt="VQA few-shot"><br>
+<img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/CLIP%20few-shot%E6%96%B9%E6%B3%95%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C.jpg" alt="CLIP few-shot"></p>
+<h2 id="image-retrieval-from-contextual-descriptions"><a class="markdownIt-Anchor" href="#image-retrieval-from-contextual-descriptions"></a> Image Retrieval from Contextual Descriptions</h2>
+<p>任务：使用上下文描述检索图像(IMAGECODE)<br>
+  给定一个描述文本和一些只在细节上有差距的图片，从中选取最符合描述的一个。</p>
+<p>模型需要的能力：</p>
+<ol>
+<li>注意图片中的细节，每条数据的图片都只在细节上有差距</li>
+<li>识别说话人的意图，文本的字面意思可能符合多张图片，但符合说话人意图的只有一张</li>
+<li>时序信息，从视频中选取的图片需要时序信息加以区分</li>
+</ol>
+<p>实验结论：</p>
+<ol>
+<li>静态图片的正确率远高于视频图片</li>
+<li>所有最先进的模型效果都不好</li>
+</ol>
+<p><img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/IMAGECODE%E5%AE%9E%E9%AA%8C%E6%A8%A1%E5%9E%8B.jpg" alt="IMAGECODE实验模型"><br>
+<img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/IMAGECODE%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C.jpg" alt="IMAGECODE实验结果"></p>
+</body></html>]]></content>
   </entry>
 </search>
