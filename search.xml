@@ -4077,17 +4077,27 @@ standing]进行微调</li>
   <entry>
     <title>调研</title>
     <url>/VQA/%E8%B0%83%E7%A0%94/</url>
-    <content><![CDATA[<!--无监督 小样本 可迁移--><!--价值
+    <content><![CDATA[<html><head></head><body><span id="more"></span>
+<!--无监督 小样本 可迁移-->
+<!--价值：为什么一定需要图片才能解决（例如情感分析）
+            （站在领奖台上的人）他为什么这么高兴？
+            （书包和物品）塞不塞的进去？
     现有方法优缺点，如何解决
+        数据增强（根据问题检索图片，再在检索出的图片上重新回答问题）
+        空间关系数据集（偏图像，文本仅占一小部分，可以做空间推理数据集，例如例子，需要推理出问题需要体积知识才能回答）
+        模型：
+            现在对空间的编码仅存在于layout层面，是否能理解透视
+            如何将图像的信息融入到文本中用于推理
     数据集
-    评价--><html><head></head><body><h1 id="acl2022"><a class="markdownIt-Anchor" href="#acl2022"></a> ACL2022</h1>
+    评价
+-->
+<h1 id="acl2022"><a class="markdownIt-Anchor" href="#acl2022"></a> ACL2022</h1>
 <h2 id="hypergraph-transformer-weakly-supervised-multi-hop-reasoning-for-knowledge-based-visual-question-answering"><a class="markdownIt-Anchor" href="#hypergraph-transformer-weakly-supervised-multi-hop-reasoning-for-knowledge-based-visual-question-answering"></a> Hypergraph Transformer: Weakly-Supervised Multi-hop Reasoning for Knowledge-based Visual Question Answering</h2>
 <p>任务：基于知识库的VQA</p>
 <p>难点：</p>
 <ol>
 <li>需要多跳推理</li>
 <li>没有数据监督推理过程的学习</li>
-<li></li>
 </ol>
 <p>方法分类：</p>
 <ul>
@@ -4114,6 +4124,8 @@ standing]进行微调</li>
 <img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/Hypergraph_Tramsformer_%E6%B6%88%E8%9E%8D%E5%AE%9E%E9%AA%8C.jpg" alt="消融实验结果"><br>
 SA: self-attention, GA：guided-attention</p>
 <h2 id="premise-based-multimodal-reasoning-conditional-inference-on-joint-textual-and-visual-clues"><a class="markdownIt-Anchor" href="#premise-based-multimodal-reasoning-conditional-inference-on-joint-textual-and-visual-clues"></a> Premise-based Multimodal Reasoning: Conditional Inference on Joint Textual and Visual Clues</h2>
+<p>价值：现有的多模态推理数据集是静态的，即无条件的，但现实世界是复杂的：同样的场景，给定不同的前提会带来不同的结果。<br>
+工作缺点：这个数据集给的例子中图像是完全可以去除的，图像与回答之间只是匹配的关系，不存在推理或者先验知识。</p>
 <p>提出了一个新数据集PMR：<br>
 除了图像外，还给了一个描述图片背景的“前提”，预测后续会发生的事件，四选一<br>
 缺少背景不影响回答事实类问题，但无法复杂问题带来的模棱两可的问题</p>
@@ -4123,6 +4135,7 @@ SA: self-attention, GA：guided-attention</p>
 <img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/PMR%E9%80%89%E9%A1%B9%E5%88%86%E5%B8%83.jpg" alt="PMR选项分布"></p>
 <h2 id="modeling-temporal-modal-entity-graph-for-procedural-multimodal-machine-comprehension"><a class="markdownIt-Anchor" href="#modeling-temporal-modal-entity-graph-for-procedural-multimodal-machine-comprehension"></a> Modeling Temporal-Modal Entity Graph for Procedural Multimodal Machine Comprehension</h2>
 <p>任务：多模态程序文件阅读理解</p>
+<p>价值：看待问题的角度。之前的方法都是直接把每一步的图像和文本一起编码，这种方法忽略了程序文件的核心：实体。程序文件可以看作实体变化的组合。</p>
 <p>数据集：</p>
 <ol>
 <li>RecipeQA 关于食谱的问答数据集</li>
@@ -4134,6 +4147,8 @@ SA: self-attention, GA：guided-attention</p>
 <img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/TMEG%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C.jpg" alt="TMEG实验结果"></p>
 <h2 id="clip-models-are-few-shot-learners-empirical-studies-on-vqa-and-visual-entailment"><a class="markdownIt-Anchor" href="#clip-models-are-few-shot-learners-empirical-studies-on-vqa-and-visual-entailment"></a> CLIP Models are Few-shot Learners: Empirical Studies on VQA and Visual Entailment</h2>
 <p>任务：zero-shot/few-show视觉文本理解，包括VQA和VE</p>
+<p>价值：巧妙的将clip的图文匹配能力使用在了NLU任务上<br>
+<img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/clip_nlu.jpg" alt="clip_nlu"></p>
 <p>VQA zero-shot难点：如何减小预训练任务与问答任务之间的差距</p>
 <ol>
 <li>自动将问题传化成填空模板，包括使用T5和依存分析两种方法</li>
@@ -4164,6 +4179,18 @@ VQAv2、SNLI-VE</p>
 </ol>
 <p><img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/IMAGECODE%E5%AE%9E%E9%AA%8C%E6%A8%A1%E5%9E%8B.jpg" alt="IMAGECODE实验模型"><br>
 <img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/IMAGECODE%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C.jpg" alt="IMAGECODE实验结果"></p>
+<h2 id="things-not-written-in-text-exploring-spatial-commonsense-from-visual-signals"><a class="markdownIt-Anchor" href="#things-not-written-in-text-exploring-spatial-commonsense-from-visual-signals"></a> Things not Written in Text: Exploring Spatial Commonsense from Visual Signals</h2>
+<p>价值：空间位置信息是人们理解世界的一个重要部分，例如：更近的距离意味着更紧密的关系（不同阵营往往在图片左右两端）、更大的物体往往意味着更强。然而，现有的预训练语言模型并不擅长空间相关的任务，因为语言很少包含明确的空间信息，比如不会有人提及骑车的人在车的上方。<br>
+  本文提出了一个banchmark用于衡量模型的空间感知能力</p>
+<p>任务：</p>
+<ol>
+<li>比较物体大小</li>
+<li>识别特殊动作下人和其他物体的位置关系</li>
+</ol>
+<p>数据集：作者构造的，没写来源</p>
+<p>实验结果：<br>
+<img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/%E4%BD%8D%E7%BD%AE%E5%85%B3%E7%B3%BB%E9%A2%84%E6%B5%8B%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C.jpg" alt="位置关系实验结果"><br>
+<img src="../../../images/%E8%AE%BA%E6%96%87/VQA/%E8%B0%83%E7%A0%94/%E4%BD%8D%E7%BD%AE%E5%85%B3%E7%B3%BB%E9%A2%84%E6%B5%8B%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C.jpg" alt="比大小实验结果"></p>
 </body></html>]]></content>
   </entry>
 </search>
