@@ -4077,7 +4077,8 @@ standing]进行微调</li>
   <entry>
     <title>调研</title>
     <url>/VQA/%E8%B0%83%E7%A0%94/</url>
-    <content><![CDATA[<html><head></head><body><span id="more"></span>
+    <content><![CDATA[<html><head></head><body><p>ACL2022多模态论文调研</p>
+<span id="more"></span>
 <!--无监督 小样本 可迁移-->
 <!--价值：为什么一定需要图片才能解决（例如情感分析）
             （站在领奖台上的人）他为什么这么高兴？
